@@ -13,8 +13,15 @@
   "executed_scripts_byte_identical": 57,
   "local_analysis_and_test_scripts_byte_identical": 3,
   "python_files_parsed": 470,
-  "files_scanned": 1728,
-  "bytes": 34338581,
+  "files_scanned": 1732,
+  "bytes": 34681121,
+  "manifest_scope": [
+    "vendor",
+    "reproduction",
+    "tools",
+    "tests",
+    "requirements"
+  ],
   "secret_hits": 0,
   "main_document_broken_links": 0
 }

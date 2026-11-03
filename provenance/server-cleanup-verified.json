@@ -1,0 +1,19 @@
+{
+  "status": "VERIFIED",
+  "ada_training_and_official_checkpoints_removed": true,
+  "ada_environment_source_and_logs_removed": true,
+  "datasets_and_shared_bases_retained": true,
+  "preserved_file_identity_unchanged": true,
+  "temporary_archive_directory_removed": true,
+  "temporary_directory_allocated_bytes_removed": 370552832,
+  "root_allocated_bytes_freed": 120056283136,
+  "combined_allocated_bytes_removed": 120426835968,
+  "roe_training_processes_still_present": 10,
+  "remaining_top": [
+    "CLEANUP_RECEIPT_20261103.json",
+    "checkpoints",
+    "configs",
+    "datasets",
+    "training_repro"
+  ]
+}

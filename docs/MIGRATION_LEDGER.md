@@ -23,3 +23,7 @@ Final: Ruling: fresh package download availability and GPU numerical execution r
 Final: Ruling: live dependency protection, repository privacy/heads and deletion require runtime gates — parent performs them and records receipts before claiming completion.
 
 Task 2: complete — Windows and Linux each pass 27 CPU tests. Linux runtime generation, 17 shell scripts, 498 Python files and real model/source symlinks passed; no copied success markers, no GPU jobs, no fresh dependency installation. Exact counts are recorded in provenance/linux-rehearsal.json.
+
+Task 3: complete — private repository created, main/adallava pushed from the Windows client. API privacy/branch SHAs matched; independent clone fsck and 27 tests passed, 1,672 source/script/test files byte-identical. Code commit verified before deletion: b8aff3674bee71499b2fba50dfabb0d05c40d1ed; main a7ed330dba4ac0aa7494c1e225629441243d5868.
+
+Task 4: complete — 72 Ada-only targets deleted after gates. All 349,215 retained files have unchanged identity manifest. Ada source/environments/trained and official Ada checkpoints removed; all datasets and shared LLaVA/CLIP retained. Temporary transfer/rehearsal directory deleted. Project directory allocation decreased 111.81 GiB, including temporary files 112.16 GiB. Local and Git receipts retained.

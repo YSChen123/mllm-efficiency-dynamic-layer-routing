@@ -37,4 +37,4 @@ JSON、manifest、READY、smoke JSON 留在 `/home/SigConv/cys/AdaLLaVA/training
 | 冻结视觉编码器 | `openai/clip-vit-large-patch14-336` | `ce19dc912ca5cd21c8a653c79e251e808ccabcd1` |
 | 可选官方对比 | `zhuoyanxu/ada-llava-L-v1.5-7b` | `5b3e371bdcd16e597b35a60f5e5d9f66c64beff6` |
 
-ROE 正在使用 `/home/SigConv/cys/AdaLLaVA/checkpoints/llava-v1.5-7b` 和 `.../clip-vit-large-patch14-336`，两份共享底座暂留，保护在跑实验。AdaLLaVA 产出的中间/final checkpoint 和官方 Ada checkpoint 在 GitHub 校验后清理。最终事实见 [`ARCHIVE_STATUS.md`](docs/ARCHIVE_STATUS.md)。
+ROE 正在使用 `/home/SigConv/cys/AdaLLaVA/checkpoints/llava-v1.5-7b` 和 `.../clip-vit-large-patch14-336`，两份共享底座暂留，保护在跑实验。AdaLLaVA 产出的中间/final checkpoint 和官方 Ada checkpoint 已在 GitHub 校验后清理。数据及共享底座保留文件身份清单前后一致。最终回执见 [`ARCHIVE_STATUS.md`](docs/ARCHIVE_STATUS.md)。
