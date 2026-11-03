@@ -1,0 +1,6 @@
+deepspeed==0.16.9
+hjson==3.1.0
+ninja==1.13.2
+py-cpuinfo==9.0.0
+nvidia-ml-py==13.615.71
+msgpack==1.2.4

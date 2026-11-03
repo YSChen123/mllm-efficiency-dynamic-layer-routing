@@ -1,0 +1,345 @@
+{
+  "kaiyuyue/llava-1.5-665k-instructions": {
+    "revision": "f321f47bf67bf43969756ef22650e04ab367bcaa",
+    "files": [
+      {
+        "path": ".gitattributes",
+        "size": 2622,
+        "lfs": null
+      },
+      {
+        "path": "README.md",
+        "size": 1731,
+        "lfs": null
+      },
+      {
+        "path": "llava_v1_5_mix665k.json",
+        "size": 1029887963,
+        "lfs": {
+          "size": 1029887963,
+          "sha256": "ce959ce6e23073ee1cd1a8a2ef1c633768c10d4174327b8b2dc7113b91af6cf8",
+          "pointer_size": 135
+        }
+      },
+      {
+        "path": "llava_v1_5_mix665k_shuffled.json",
+        "size": 902648564,
+        "lfs": {
+          "size": 902648564,
+          "sha256": "2b412dc5a97cce9dc2450a6d6d77183ca847a019414bea4b568155cdcf0e2af5",
+          "pointer_size": 134
+        }
+      },
+      {
+        "path": "llava_v1_5_mix665k_shuffled_full.json",
+        "size": 1043748111,
+        "lfs": {
+          "size": 1043748111,
+          "sha256": "550fed2adc7ab20da19fca36f085744bfccd30cf88ab58e61501873e2e4e088c",
+          "pointer_size": 135
+        }
+      },
+      {
+        "path": "train_split/coco.tar.gz",
+        "size": 21350861013,
+        "lfs": {
+          "size": 21350861013,
+          "sha256": "6f77c377f864dc8869d3ff12adafcf067fbd43be7c6773a5c526dc6d898f80b9",
+          "pointer_size": 136
+        }
+      },
+      {
+        "path": "train_split/gqa.tar.gz",
+        "size": 21816460249,
+        "lfs": {
+          "size": 21816460249,
+          "sha256": "1d467c26dcbed71f6b2027989fb5e5045eb0bb96a76025e710dbb4452ac5c6f9",
+          "pointer_size": 136
+        }
+      },
+      {
+        "path": "train_split/ocr_vqa.tar.gz",
+        "size": 8943548609,
+        "lfs": {
+          "size": 8943548609,
+          "sha256": "f7e1d8b40dba44992ce60e97df3a6b3790a7eeaec6f47d8dedc53fbd8486fe2e",
+          "pointer_size": 135
+        }
+      },
+      {
+        "path": "train_split/textvqa.tar.gz",
+        "size": 7073389297,
+        "lfs": {
+          "size": 7073389297,
+          "sha256": "d72cca7516c05637529898988d6a6dff6a6389c0fdd058958b7d294e9efa769f",
+          "pointer_size": 135
+        }
+      },
+      {
+        "path": "train_split/vg.tar.gz",
+        "size": 15202226482,
+        "lfs": {
+          "size": 15202226482,
+          "sha256": "d8b84e3e1e9a8effcb116538d7994079d9c2d2ebe615015dbff70dc7633dd5f7",
+          "pointer_size": 136
+        }
+      }
+    ]
+  },
+  "OpenGVLab/InternVL-Chat-V1-2-SFT-Data": {
+    "revision": "589b010050d3b530012466ecd6dc9b61a772b739",
+    "files": [
+      {
+        "path": ".gitattributes",
+        "size": 2882,
+        "lfs": null
+      },
+      {
+        "path": "README.md",
+        "size": 2560,
+        "lfs": null
+      },
+      {
+        "path": "data/ai2d.zip",
+        "size": 1401763492,
+        "lfs": {
+          "size": 1401763492,
+          "sha256": "873f86524c775c8cd3a18e88eec8d419eec88617a61b20008fc1ed72a3058ebe",
+          "pointer_size": 135
+        }
+      },
+      {
+        "path": "data/chartqa.zip",
+        "size": 856133029,
+        "lfs": {
+          "size": 856133029,
+          "sha256": "e2d403ad3299e475b321426da6aed4d864ae85b229633be330f17626f27f208b",
+          "pointer_size": 134
+        }
+      },
+      {
+        "path": "data/coco.zip",
+        "size": 19208384853,
+        "lfs": {
+          "size": 19208384853,
+          "sha256": "983aeb3f152cc74d05a07fa79edbb17b1a0e54a713042521cd9ef3589e967f5b",
+          "pointer_size": 136
+        }
+      },
+      {
+        "path": "data/docvqa.zip",
+        "size": 17303394150,
+        "lfs": {
+          "size": 17303394150,
+          "sha256": "544a48338fac4a79c6528463eda96539ce99e1ac5ac6bc01c525a7ac9b52cc35",
+          "pointer_size": 136
+        }
+      },
+      {
+        "path": "data/dvqa.zip",
+        "size": 6106064956,
+        "lfs": {
+          "size": 6106064956,
+          "sha256": "982dd91ca4999b036790e7ab5eb2f800d69bcc9c44d27a29eb1393e68112c535",
+          "pointer_size": 135
+        }
+      },
+      {
+        "path": "data/geoqa+.zip",
+        "size": 64564064,
+        "lfs": {
+          "size": 64564064,
+          "sha256": "47f2bfc93badb519d2f569783defdb774b22e7552221931a7be176f3d25fa98f",
+          "pointer_size": 133
+        }
+      },
+      {
+        "path": "data/gqa.zip",
+        "size": 21819158342,
+        "lfs": {
+          "size": 21819158342,
+          "sha256": "51729b95e757066fe95d50dcca477c13ed5098b61c858e39f6633060e62dc47a",
+          "pointer_size": 136
+        }
+      },
+      {
+        "path": "data/ocr_vqa.zip",
+        "size": 8944684447,
+        "lfs": {
+          "size": 8944684447,
+          "sha256": "88a1c1e217afd34983373e0a610c86da5cede5ae2c9257c762e1ca73995cbc5f",
+          "pointer_size": 135
+        }
+      },
+      {
+        "path": "data/sam.zip",
+        "size": 9781276074,
+        "lfs": {
+          "size": 9781276074,
+          "sha256": "c17c44d2769b095ffd445e61773f7dd818fda963969ab458864dcfdf67e7998d",
+          "pointer_size": 135
+        }
+      },
+      {
+        "path": "data/share_textvqa.zip",
+        "size": 126412719,
+        "lfs": {
+          "size": 126412719,
+          "sha256": "4d193d543a9105a86025b4436a8425f1479dcafe4cecf3326e850e643fe6bcea",
+          "pointer_size": 134
+        }
+      },
+      {
+        "path": "data/synthdog-en.zip",
+        "size": 2342997642,
+        "lfs": {
+          "size": 2342997642,
+          "sha256": "4ff887f75c6e845e77d3b43fde9dfa256bf67c60e7ca90dd247fe718c69788ef",
+          "pointer_size": 135
+        }
+      },
+      {
+        "path": "data/textvqa.zip",
+        "size": 7072703154,
+        "lfs": {
+          "size": 7072703154,
+          "sha256": "866f8b6af057c46fe80d0ccb748720a02469142aca4607e807c0633944731817",
+          "pointer_size": 135
+        }
+      },
+      {
+        "path": "data/vg.zip",
+        "size": 20676507316,
+        "lfs": {
+          "size": 20676507316,
+          "sha256": "d6d6e858a983c3f9a964a4f882b44f8a0633f9282822e6a59027d8a4708e1c06",
+          "pointer_size": 136
+        }
+      },
+      {
+        "path": "data/web-celebrity.zip",
+        "size": 103211283,
+        "lfs": {
+          "size": 103211283,
+          "sha256": "b7ee96c304a5d20554bff727458266230f1452c935b1e29fa3e697b6c76c5431",
+          "pointer_size": 134
+        }
+      },
+      {
+        "path": "data/web-landmark.zip",
+        "size": 227421243,
+        "lfs": {
+          "size": 227421243,
+          "sha256": "0f91905d1ed9a9fb92efd62c0dc89608bf95d3466de66f2aadcf3d01e6e51504",
+          "pointer_size": 134
+        }
+      },
+      {
+        "path": "data/wikiart.zip",
+        "size": 185437722,
+        "lfs": {
+          "size": 185437722,
+          "sha256": "3a0a663a6d51594236fe48c007bc4d32716ac89f2b71a64a42c98e06f225dcdb",
+          "pointer_size": 134
+        }
+      },
+      {
+        "path": "opensource/ai2d_train_12k.jsonl",
+        "size": 3741183,
+        "lfs": null
+      },
+      {
+        "path": "opensource/chartqa_train_18k.jsonl",
+        "size": 8771974,
+        "lfs": null
+      },
+      {
+        "path": "opensource/docvqa_train_10k.jsonl",
+        "size": 13883382,
+        "lfs": {
+          "size": 13883382,
+          "sha256": "0bb6fc2f903d5b61ea83a4b52d0804a8daa4798546441b1e5df0a3e2d054fee3",
+          "pointer_size": 133
+        }
+      },
+      {
+        "path": "opensource/dvqa_train_200k.jsonl",
+        "size": 415656211,
+        "lfs": {
+          "size": 415656211,
+          "sha256": "9d5ade7691b93448f9d7b9d76fd5a50aea0fbd101770844f190e5d9bd2f05c6a",
+          "pointer_size": 134
+        }
+      },
+      {
+        "path": "opensource/geoqa+.jsonl",
+        "size": 26016884,
+        "lfs": {
+          "size": 26016884,
+          "sha256": "d9f04c391b93fa068b60609ee8bf47e723403b53eb2c7fce2916f69c1dfc6487",
+          "pointer_size": 133
+        }
+      },
+      {
+        "path": "opensource/llava_instruct_150k_zh.jsonl",
+        "size": 167963876,
+        "lfs": {
+          "size": 167963876,
+          "sha256": "c24762b1bcfded89f960264f7e474d0ac8699b77a5f25ef63e20adb9cc78ee8b",
+          "pointer_size": 134
+        }
+      },
+      {
+        "path": "opensource/sharegpt4v_instruct_gpt4-vision_cap100k.jsonl",
+        "size": 117401216,
+        "lfs": {
+          "size": 117401216,
+          "sha256": "ac102c461c9ecb79464cdc7e99e9028d2d37631a206fb83f4fb9e471266fd160",
+          "pointer_size": 134
+        }
+      },
+      {
+        "path": "opensource/sharegpt4v_mix665k_cap23k_coco-ap9k_lcs3k_sam9k_div2k.jsonl",
+        "size": 800985941,
+        "lfs": {
+          "size": 800985941,
+          "sha256": "1f725c9f0a468d9bed8a03c7647fbd1e7306d4e03cfba676ead7be80a211523a",
+          "pointer_size": 134
+        }
+      },
+      {
+        "path": "opensource/synthdog_en.jsonl",
+        "size": 15776461,
+        "lfs": {
+          "size": 15776461,
+          "sha256": "2443477a1fefeeb114582ca67f3cfcb28cbf4ab10dadfe317e4f93eb859edad6",
+          "pointer_size": 133
+        }
+      }
+    ]
+  },
+  "qnguyen3/ocr_vqa": {
+    "revision": "9ee01c80855d60ce91a7e7cedf4dccf0f6edada0",
+    "files": [
+      {
+        "path": ".gitattributes",
+        "size": 2355,
+        "lfs": null
+      },
+      {
+        "path": "README.md",
+        "size": 25,
+        "lfs": null
+      },
+      {
+        "path": "ocr_vqa.zip",
+        "size": 8931303798,
+        "lfs": {
+          "size": 8931303798,
+          "sha256": "24c8db2b3b9fed20c67bca97f0154dcea89702831f18a0369fcb6539d1d6e3ad",
+          "pointer_size": 135
+        }
+      }
+    ]
+  }
+}

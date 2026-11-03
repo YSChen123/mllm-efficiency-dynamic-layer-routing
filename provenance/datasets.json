@@ -1,0 +1,158 @@
+[
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/datasets/mme",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/datasets/mme",
+    "du_kib": 2536364
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/datasets/pope",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/datasets/pope",
+    "du_kib": 1685892
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/datasets/scienceqa_img",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/datasets/scienceqa_img",
+    "du_kib": 523364
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/datasets/textvqa_val",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/datasets/textvqa_val",
+    "du_kib": 5787628
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/.cache",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/training_repro/data/.cache",
+    "du_kib": 20
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/DATA_READY.json",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/training_repro/data/DATA_READY.json",
+    "du_kib": 4
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/archives",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/training_repro/data/archives",
+    "du_kib": 48
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/coco_verified.json",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/training_repro/data/coco_verified.json",
+    "du_kib": 4
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/gqa_verified.json",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/training_repro/data/gqa_verified.json",
+    "du_kib": 4
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/images",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/training_repro/data/images",
+    "du_kib": 46329904
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/instruction_manifest.json",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/training_repro/data/instruction_manifest.json",
+    "du_kib": 11956
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/llava_v1_5_mix665k.json",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/training_repro/data/llava_v1_5_mix665k.json",
+    "du_kib": 1005756
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/ocr_vqa_verified.json",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/training_repro/data/ocr_vqa_verified.json",
+    "du_kib": 4
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/smoke32.json",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/training_repro/data/smoke32.json",
+    "du_kib": 40
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/smoke8.json",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/training_repro/data/smoke8.json",
+    "du_kib": 12
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/textvqa_verified.json",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/training_repro/data/textvqa_verified.json",
+    "du_kib": 4
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/vg_verified.json",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/training_repro/data/vg_verified.json",
+    "du_kib": 4
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/configs/datasets/mme.json",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/configs/datasets/mme.json",
+    "du_kib": 4
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/configs/datasets/pope.json",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/configs/datasets/pope.json",
+    "du_kib": 4
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/configs/datasets/scienceqa_img.json",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/configs/datasets/scienceqa_img.json",
+    "du_kib": 4
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/configs/datasets/textvqa_val.json",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/configs/datasets/textvqa_val.json",
+    "du_kib": 4
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/images/coco",
+    "symlink": false,
+    "resolved": "/home/SigConv/cys/AdaLLaVA/training_repro/data/images/coco",
+    "du_kib": 14326300
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/images/gqa",
+    "symlink": true,
+    "resolved": "/home/SigConv/backup2/adallava-training-20261027/images/gqa",
+    "du_kib": 10106604
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/images/ocr_vqa",
+    "symlink": true,
+    "resolved": "/home/SigConv/backup2/adallava-training-20261027/images/ocr_vqa",
+    "du_kib": 3535104
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/images/textvqa",
+    "symlink": true,
+    "resolved": "/home/SigConv/backup2/adallava-training-20261027/images/textvqa",
+    "du_kib": 6076640
+  },
+  {
+    "path": "/home/SigConv/cys/AdaLLaVA/training_repro/data/images/vg",
+    "symlink": true,
+    "resolved": "/home/SigConv/backup2/adallava-training-20261027/images/vg",
+    "du_kib": 12285252
+  }
+]

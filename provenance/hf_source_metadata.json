@@ -1,0 +1,127 @@
+{
+  "liuhaotian/llava-v1.5-7b": {
+    "revision": "4481d270cc22fd5c4d1bb5df129622006ccd9234",
+    "files": [
+      {
+        "path": "config.json",
+        "size": 1161,
+        "lfs": null
+      },
+      {
+        "path": "generation_config.json",
+        "size": 124,
+        "lfs": null
+      },
+      {
+        "path": "mm_projector.bin",
+        "size": 41961085,
+        "lfs": {
+          "size": 41961085,
+          "sha256": "be33a3b477e091832a3c8a9fabf5769c43b4cb2c161fc8c464b7bb214f16143a",
+          "pointer_size": 133
+        }
+      },
+      {
+        "path": "pytorch_model-00001-of-00002.bin",
+        "size": 9976634558,
+        "lfs": {
+          "size": 9976634558,
+          "sha256": "492fdfa63cf314097d99da81a3586d54a97adc1471a0ae0535f5caa269b86314",
+          "pointer_size": 135
+        }
+      },
+      {
+        "path": "pytorch_model-00002-of-00002.bin",
+        "size": 3542276251,
+        "lfs": {
+          "size": 3542276251,
+          "sha256": "c0eb94eb3fa578a4c63567f2eca6b0acf6a44a891c257aca0df88ffa891de72e",
+          "pointer_size": 135
+        }
+      },
+      {
+        "path": "pytorch_model.bin.index.json",
+        "size": 27068,
+        "lfs": null
+      },
+      {
+        "path": "special_tokens_map.json",
+        "size": 438,
+        "lfs": null
+      },
+      {
+        "path": "tokenizer.model",
+        "size": 499723,
+        "lfs": {
+          "size": 499723,
+          "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+          "pointer_size": 131
+        }
+      },
+      {
+        "path": "tokenizer_config.json",
+        "size": 749,
+        "lfs": null
+      }
+    ]
+  },
+  "liuhaotian/LLaVA-Instruct-150K": {
+    "revision": "9d451dc7629cfe0469f6ae4432b765cd603d5fcb",
+    "files": [
+      {
+        "path": "complex_reasoning_77k.json",
+        "size": 79619894,
+        "lfs": {
+          "size": 79619894,
+          "sha256": "e7965bd54bb60fcff16fcfd2448cedfce5730a59652d15c08c012a77752548ca",
+          "pointer_size": 133
+        }
+      },
+      {
+        "path": "conversation_58k.json",
+        "size": 126088572,
+        "lfs": {
+          "size": 126088572,
+          "sha256": "b5593f0d7d4215fb5e2597060dd8335c72518c55cf97e8cd5edf9912a6e3e1b2",
+          "pointer_size": 134
+        }
+      },
+      {
+        "path": "detail_23k.json",
+        "size": 20524987,
+        "lfs": {
+          "size": 20524987,
+          "sha256": "e6e0ab72875de62410ed0b85e619efc8ebbb2f1469a110648009d49105ac01c0",
+          "pointer_size": 133
+        }
+      },
+      {
+        "path": "llava_instruct_150k.json",
+        "size": 228941895,
+        "lfs": {
+          "size": 228941895,
+          "sha256": "6b68bc5ca2bfd8a71119af0e8454929668ccda6a334955ccc95d114fc8d082fa",
+          "pointer_size": 134
+        }
+      },
+      {
+        "path": "llava_instruct_80k.json",
+        "size": 130697744,
+        "lfs": {
+          "size": 130697744,
+          "sha256": "3e5bd621239cf8f95580e75832b532879b4acb93c0a26df64b4dfcf39f544c06",
+          "pointer_size": 134
+        }
+      },
+      {
+        "path": "llava_v1_5_mix665k.json",
+        "size": 1029887963,
+        "lfs": {
+          "size": 1029887963,
+          "sha256": "ce959ce6e23073ee1cd1a8a2ef1c633768c10d4174327b8b2dc7113b91af6cf8",
+          "pointer_size": 135
+        }
+      }
+    ]
+  }
+}

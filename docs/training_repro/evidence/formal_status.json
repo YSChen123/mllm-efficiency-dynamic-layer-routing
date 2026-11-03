@@ -1,0 +1,98 @@
+{
+  "data_ready": true,
+  "smoke_passed": true,
+  "finished": false,
+  "latest_complete_checkpoint": null,
+  "recent_events": [
+    {
+      "time": 1793119958.6660128,
+      "event": "STEP",
+      "rank": 0,
+      "step": 3,
+      "epoch": 0.0005771832256125057,
+      "wall_seconds": 119.73606849089265,
+      "effective_samples_per_second": 3.207053360585917,
+      "peak_allocated_bytes": 62674448896,
+      "peak_reserved_bytes": 69730304000,
+      "parameter_updates": {},
+      "gradient_evidence": {}
+    },
+    {
+      "time": 1793119958.667013,
+      "event": "LOG",
+      "rank": 0,
+      "step": 3,
+      "loss": 3.3426,
+      "learning_rate": 1.9230769230769234e-07,
+      "epoch": 0.0
+    },
+    {
+      "time": 1793119996.9280794,
+      "event": "STEP",
+      "rank": 0,
+      "step": 4,
+      "epoch": 0.0007695776341500075,
+      "wall_seconds": 157.99813568219543,
+      "effective_samples_per_second": 3.2405443108879566,
+      "peak_allocated_bytes": 62674448896,
+      "peak_reserved_bytes": 69730304000,
+      "parameter_updates": {},
+      "gradient_evidence": {}
+    },
+    {
+      "time": 1793119996.929092,
+      "event": "LOG",
+      "rank": 0,
+      "step": 4,
+      "loss": 2.0567,
+      "learning_rate": 2.564102564102564e-07,
+      "epoch": 0.0
+    },
+    {
+      "time": 1793120034.8529444,
+      "event": "STEP",
+      "rank": 0,
+      "step": 5,
+      "epoch": 0.0009619720426875094,
+      "wall_seconds": 195.9229989759624,
+      "effective_samples_per_second": 3.2665892384140633,
+      "peak_allocated_bytes": 62674448896,
+      "peak_reserved_bytes": 69730304000,
+      "parameter_updates": {},
+      "gradient_evidence": {}
+    },
+    {
+      "time": 1793120034.8539197,
+      "event": "LOG",
+      "rank": 0,
+      "step": 5,
+      "loss": 3.0797,
+      "learning_rate": 3.205128205128205e-07,
+      "epoch": 0.0
+    }
+  ],
+  "run_config": {
+    "max_steps": 5197,
+    "world_size": 2,
+    "micro_batch": 2,
+    "accumulation": 32,
+    "global_batch": 128
+  },
+  "download_inputs_exit": "0",
+  "prepare_images_exit": "0",
+  "prefetch_images_exit": "0",
+  "formal_exit": null,
+  "main_quota": {
+    "used": 110863998976,
+    "soft": 289910292480
+  },
+  "tmux": "aael_strict_resume: 1 windows (created Tue Sep  8 09:36:07 2026)\nada_train_formal: 1 windows (created Wed Oct 28 00:49:41 2026)",
+  "formal_status": "RUNNING",
+  "historical_smoke_exit_codes": {
+    "fresh": "0",
+    "resume": "0",
+    "recovered_and_verified": true,
+    "note": "Clean gradient-accumulation smoke: save, actual resume and portable export/reload verified."
+  },
+  "gpu": "0, 67443 MiB, 92 %\n1, 67431 MiB, 93 %\n2, 3 MiB, 0 %\n3, 2667 MiB, 5 %"
+}

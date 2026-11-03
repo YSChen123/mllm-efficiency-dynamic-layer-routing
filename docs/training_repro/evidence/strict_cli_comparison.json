@@ -1,0 +1,261 @@
+[
+  {
+    "flag": "--deepspeed",
+    "official": "./LLaVA/scripts/zero3.json",
+    "actual": "training_repro/zero3.json",
+    "same": false,
+    "equivalent_value": false
+  },
+  {
+    "flag": "--model_name_or_path",
+    "official": "${original_model}",
+    "actual": "training_repro/models/llava-v1.5-7b",
+    "same": false,
+    "equivalent_value": false
+  },
+  {
+    "flag": "--version",
+    "official": "v1",
+    "actual": "v1",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--data_path",
+    "official": "./LLaVA-FineTune/llava_v1_5_mix665k.json",
+    "actual": "training_repro/data/llava_v1_5_mix665k.json",
+    "same": false,
+    "equivalent_value": false
+  },
+  {
+    "flag": "--image_folder",
+    "official": "./LLaVA-FineTune/images",
+    "actual": "training_repro/data/images",
+    "same": false,
+    "equivalent_value": false
+  },
+  {
+    "flag": "--vision_tower",
+    "official": "openai/clip-vit-large-patch14-336",
+    "actual": "/home/SigConv/cys/AdaLLaVA/checkpoints/clip-vit-large-patch14-336",
+    "same": false,
+    "equivalent_value": false
+  },
+  {
+    "flag": "--mm_projector_type",
+    "official": "mlp2x_gelu",
+    "actual": "mlp2x_gelu",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--mm_vision_select_layer",
+    "official": "-2",
+    "actual": "-2",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--mm_use_im_start_end",
+    "official": "False",
+    "actual": "False",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--mm_use_im_patch_token",
+    "official": "False",
+    "actual": "False",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--image_aspect_ratio",
+    "official": "pad",
+    "actual": "pad",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--group_by_modality_length",
+    "official": "True",
+    "actual": "True",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--freeze_backbone",
+    "official": "False",
+    "actual": "False",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--bf16",
+    "official": "True",
+    "actual": "True",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--num_prefix_layers",
+    "official": "16",
+    "actual": "16",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--token_selecting",
+    "official": "none",
+    "actual": "none",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--scheduler_type",
+    "official": "L",
+    "actual": "L",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--output_dir",
+    "official": "checkpoints/ada-llava-L-v1.5-7b",
+    "actual": "/home/SigConv/cys/AdaLLaVA/training_repro/runs/adallava-L-20261027",
+    "same": false,
+    "equivalent_value": false
+  },
+  {
+    "flag": "--num_train_epochs",
+    "official": "1",
+    "actual": "1",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--per_device_train_batch_size",
+    "official": "2",
+    "actual": "2",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--gradient_accumulation_steps",
+    "official": "4",
+    "actual": "32",
+    "same": false,
+    "equivalent_value": false
+  },
+  {
+    "flag": "--evaluation_strategy",
+    "official": "no",
+    "actual": "no",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--save_strategy",
+    "official": "steps",
+    "actual": "steps",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--save_steps",
+    "official": "500",
+    "actual": "500",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--save_total_limit",
+    "official": "1",
+    "actual": "1",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--learning_rate",
+    "official": "1e-5",
+    "actual": "1e-5",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--weight_decay",
+    "official": "0.",
+    "actual": "0",
+    "same": false,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--warmup_ratio",
+    "official": "0.03",
+    "actual": "0.03",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--lr_scheduler_type",
+    "official": "cosine",
+    "actual": "cosine",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--logging_steps",
+    "official": "1",
+    "actual": "1",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--tf32",
+    "official": "True",
+    "actual": "True",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--model_max_length",
+    "official": "2048",
+    "actual": "2048",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--gradient_checkpointing",
+    "official": "True",
+    "actual": "True",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--dataloader_num_workers",
+    "official": "4",
+    "actual": "4",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--lazy_preprocess",
+    "official": "True",
+    "actual": "True",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--report_to",
+    "official": "none",
+    "actual": "none",
+    "same": true,
+    "equivalent_value": true
+  },
+  {
+    "flag": "--run_name",
+    "official": "ada-llava-L-v1.5-7b${RUN_NUM}",
+    "actual": "adallava-L-20261027",
+    "same": false,
+    "equivalent_value": false
+  }
+]

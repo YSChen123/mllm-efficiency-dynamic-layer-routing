@@ -1,0 +1,11 @@
+{
+  "status": "PASSED",
+  "python": "3.10.22 (main, Oct  1 2026, 20:14:04) [GCC 14.3.0]",
+  "cpu_tests": 27,
+  "bash_scripts_checked": 17,
+  "runtime_python_files_parsed": 498,
+  "real_linux_symlinks_verified": true,
+  "historical_success_markers_absent": true,
+  "gpu_training_or_evaluation_started": false,
+  "fresh_dependency_install_performed": false
+}

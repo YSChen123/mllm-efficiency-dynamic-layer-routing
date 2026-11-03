@@ -1,0 +1,27 @@
+{
+  "task": "scienceqa_img",
+  "repo": "lmms-lab/ScienceQA",
+  "config": "ScienceQA-IMG",
+  "split": "test",
+  "revision": "69dd4d6b67373d38f96a5badd5d24d0eb5bcdc50",
+  "count": 2017,
+  "features": "{'image': Image(decode=True, id=None), 'question': Value(dtype='string', id=None), 'choices': Sequence(feature=Value(dtype='string', id=None), length=-1, id=None), 'answer': Value(dtype='int8', id=None), 'hint': Value(dtype='string', id=None), 'task': Value(dtype='string', id=None), 'grade': Value(dtype='string', id=None), 'subject': Value(dtype='string', id=None), 'topic': Value(dtype='string', id=None), 'category': Value(dtype='string', id=None), 'skill': Value(dtype='string', id=None), 'lecture': Value(dtype='string', id=None), 'solution': Value(dtype='string', id=None)}",
+  "fingerprint": "7091affa9e78de29",
+  "download_size": 663306124,
+  "dataset_size": 685752524.0,
+  "info_version": "0.0.0",
+  "cache": "/home/SigConv/cys/AdaLLaVA/datasets/scienceqa_img/arrow",
+  "splits": {
+    "validation": 2097,
+    "test": 2017
+  },
+  "arrow_files": {
+    "validation": [
+      "/home/SigConv/cys/AdaLLaVA/datasets/scienceqa_img/arrow/lmms-lab___science_qa/ScienceQA-IMG/0.0.0/69dd4d6b67373d38f96a5badd5d24d0eb5bcdc50/science_qa-validation.arrow"
+    ],
+    "test": [
+      "/home/SigConv/cys/AdaLLaVA/datasets/scienceqa_img/arrow/lmms-lab___science_qa/ScienceQA-IMG/0.0.0/69dd4d6b67373d38f96a5badd5d24d0eb5bcdc50/science_qa-test.arrow"
+    ]
+  },
+  "prepared_unix_time": 1792834845.8798604
+}

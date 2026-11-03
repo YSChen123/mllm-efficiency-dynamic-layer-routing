@@ -1,0 +1,38 @@
+{
+  "checkpoint": "/home/SigConv/cys/AdaLLaVA/training_repro/runs/adallava-L-20261027/checkpoint-2000",
+  "file": "/home/SigConv/cys/AdaLLaVA/training_repro/runs/adallava-L-20261027/checkpoint-2000/global_step2000/zero_pp_rank_1_mp_rank_00_model_states.pt",
+  "metadata": {
+    "global_steps": 2000,
+    "global_samples": 256000,
+    "skipped_steps": 0,
+    "dp_world_size": 2,
+    "mp_world_size": 1,
+    "ds_version": "0.16.9"
+  },
+  "engine_config": {
+    "bf16": {
+      "enabled": true
+    },
+    "train_micro_batch_size_per_gpu": 2,
+    "train_batch_size": 128,
+    "gradient_accumulation_steps": 32,
+    "zero_optimization": {
+      "stage": 3,
+      "overlap_comm": true,
+      "contiguous_gradients": true,
+      "sub_group_size": 1000000000,
+      "reduce_bucket_size": 16777216,
+      "stage3_prefetch_bucket_size": 0,
+      "stage3_param_persistence_threshold": 40960,
+      "stage3_max_live_parameters": 1000000000,
+      "stage3_max_reuse_distance": 1000000000,
+      "stage3_gather_16bit_weights_on_model_save": false
+    },
+    "steps_per_print": Infinity,
+    "fp16": {
+      "enabled": false
+    },
+    "zero_allow_untested_optimizer": true
+  },
+  "effective_gradient_clipping": 0.0
+}

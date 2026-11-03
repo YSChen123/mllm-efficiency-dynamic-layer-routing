@@ -1,0 +1,2966 @@
+{
+  "full_budget": {
+    "dense": {
+      "categories": {
+        "artwork": 120.25,
+        "celebrity": 137.35294117647058,
+        "count": 155.0,
+        "color": 170.0,
+        "position": 133.33333333333334,
+        "OCR": 137.5,
+        "landmark": 163.75,
+        "scene": 157.75,
+        "existence": 190.0,
+        "posters": 147.61904761904762
+      },
+      "category_question_counts": {
+        "artwork": 400,
+        "celebrity": 340,
+        "count": 60,
+        "color": 60,
+        "position": 60,
+        "OCR": 40,
+        "landmark": 400,
+        "scene": 400,
+        "existence": 60,
+        "posters": 294
+      },
+      "unparsed_answers_all_2374": 3,
+      "perception_questions": 2114
+    },
+    "official": {
+      "categories": {
+        "artwork": 120.5,
+        "celebrity": 140.88235294117646,
+        "count": 145.0,
+        "color": 175.0,
+        "position": 148.33333333333334,
+        "OCR": 140.0,
+        "landmark": 160.75,
+        "scene": 155.75,
+        "existence": 190.0,
+        "posters": 144.5578231292517
+      },
+      "category_question_counts": {
+        "artwork": 400,
+        "celebrity": 340,
+        "count": 60,
+        "color": 60,
+        "position": 60,
+        "OCR": 40,
+        "landmark": 400,
+        "scene": 400,
+        "existence": 60,
+        "posters": 294
+      },
+      "unparsed_answers_all_2374": 4,
+      "perception_questions": 2114
+    },
+    "reproduced": {
+      "categories": {
+        "artwork": 125.0,
+        "celebrity": 125.58823529411765,
+        "count": 148.33333333333334,
+        "color": 170.0,
+        "position": 140.0,
+        "OCR": 110.0,
+        "landmark": 166.25,
+        "scene": 161.75,
+        "existence": 185.0,
+        "posters": 131.2925170068027
+      },
+      "category_question_counts": {
+        "artwork": 400,
+        "celebrity": 340,
+        "count": 60,
+        "color": 60,
+        "position": 60,
+        "OCR": 40,
+        "landmark": 400,
+        "scene": 400,
+        "existence": 60,
+        "posters": 294
+      },
+      "unparsed_answers_all_2374": 3,
+      "perception_questions": 2114
+    }
+  },
+  "category_comparison": [
+    {
+      "category": "OCR",
+      "official": 140.0,
+      "reproduced": 110.0,
+      "delta": -30.0
+    },
+    {
+      "category": "celebrity",
+      "official": 140.88235294117646,
+      "reproduced": 125.58823529411765,
+      "delta": -15.294117647058812
+    },
+    {
+      "category": "posters",
+      "official": 144.5578231292517,
+      "reproduced": 131.2925170068027,
+      "delta": -13.265306122448976
+    },
+    {
+      "category": "position",
+      "official": 148.33333333333334,
+      "reproduced": 140.0,
+      "delta": -8.333333333333343
+    },
+    {
+      "category": "color",
+      "official": 175.0,
+      "reproduced": 170.0,
+      "delta": -5.0
+    },
+    {
+      "category": "existence",
+      "official": 190.0,
+      "reproduced": 185.0,
+      "delta": -5.0
+    },
+    {
+      "category": "count",
+      "official": 145.0,
+      "reproduced": 148.33333333333334,
+      "delta": 3.333333333333343
+    },
+    {
+      "category": "artwork",
+      "official": 120.5,
+      "reproduced": 125.0,
+      "delta": 4.5
+    },
+    {
+      "category": "landmark",
+      "official": 160.75,
+      "reproduced": 166.25,
+      "delta": 5.5
+    },
+    {
+      "category": "scene",
+      "official": 155.75,
+      "reproduced": 161.75,
+      "delta": 6.0
+    }
+  ],
+  "official_correct_own_wrong": 85,
+  "own_correct_official_wrong": 63,
+  "changed_predictions": [
+    {
+      "doc_id": 45,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/13239.jpg",
+        "question": "Is this artwork titled the adoration of the shepherds? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/13239.jpg",
+        "question": "Is this artwork titled the adoration of the shepherds? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 69,
+      "own": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/12736.jpg",
+        "question": "Is this artwork displayed in protestant parish church, gelnhausen? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/12736.jpg",
+        "question": "Is this artwork displayed in protestant parish church, gelnhausen? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 80,
+      "own": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/35658.jpg",
+        "question": "Is this artwork created by sebastiano del piombo? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/35658.jpg",
+        "question": "Is this artwork created by sebastiano del piombo? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 84,
+      "own": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/39482.jpg",
+        "question": "Does this artwork exist in the form of painting? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/39482.jpg",
+        "question": "Does this artwork exist in the form of painting? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 101,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/20551.jpg",
+        "question": "Is this artwork created by scultori, diana? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/20551.jpg",
+        "question": "Is this artwork created by scultori, diana? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 102,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/42941.jpg",
+        "question": "Is this artwork created by witte, emanuel de? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/42941.jpg",
+        "question": "Is this artwork created by witte, emanuel de? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 104,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/24723.jpg",
+        "question": "Is this artwork titled tomb of henry the lion and his wife matilda? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/24723.jpg",
+        "question": "Is this artwork titled tomb of henry the lion and his wife matilda? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 121,
+      "own": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/43349.jpg",
+        "question": "Is this artwork created by baccanelli, giovanni antonio di giulio? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/43349.jpg",
+        "question": "Is this artwork created by baccanelli, giovanni antonio di giulio? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 153,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/35513.jpg",
+        "question": "Is this artwork created by cassioli, amos? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/35513.jpg",
+        "question": "Is this artwork created by cassioli, amos? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 178,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/2507.jpg",
+        "question": "Is this artwork displayed in private collection? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/2507.jpg",
+        "question": "Is this artwork displayed in private collection? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 185,
+      "own": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/4836.jpg",
+        "question": "Is this artwork displayed in palais saint-vaast, arras? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/4836.jpg",
+        "question": "Is this artwork displayed in palais saint-vaast, arras? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 190,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/24122.jpg",
+        "question": "Is this artwork displayed in museo correr, venice? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/24122.jpg",
+        "question": "Is this artwork displayed in museo correr, venice? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 200,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/12908.jpg",
+        "question": "Is this artwork titled ruth and boaz? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/12908.jpg",
+        "question": "Is this artwork titled ruth and boaz? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 222,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/12652.jpg",
+        "question": "Is this artwork displayed in stedelijk museum de lakenhal, leiden? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/12652.jpg",
+        "question": "Is this artwork displayed in stedelijk museum de lakenhal, leiden? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 234,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/8797.jpg",
+        "question": "Is this artwork created by coecke van aelst, pieter? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/8797.jpg",
+        "question": "Is this artwork created by coecke van aelst, pieter? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 272,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/42796.jpg",
+        "question": "Is this artwork displayed in private collection? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/42796.jpg",
+        "question": "Is this artwork displayed in private collection? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 275,
+      "own": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/21580.jpg",
+        "question": "Is this artwork created by bonino da campione? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/21580.jpg",
+        "question": "Is this artwork created by bonino da campione? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 287,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/28758.jpg",
+        "question": "Does this artwork exist in the form of graphics? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/28758.jpg",
+        "question": "Does this artwork exist in the form of graphics? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 292,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/20483.jpg",
+        "question": "Is this artwork titled allegory of the regency? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/20483.jpg",
+        "question": "Is this artwork titled allegory of the regency? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 309,
+      "own": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/18926.jpg",
+        "question": "Is this artwork created by cozens, john robert? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/18926.jpg",
+        "question": "Is this artwork created by cozens, john robert? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 323,
+      "own": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/8885.jpg",
+        "question": "Is this artwork displayed in museo civico d'arte antica, turin? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/8885.jpg",
+        "question": "Is this artwork displayed in museo civico d'arte antica, turin? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 327,
+      "own": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/34363.jpg",
+        "question": "Is this artwork displayed in state tretyakov gallery, moscow? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/34363.jpg",
+        "question": "Is this artwork displayed in state tretyakov gallery, moscow? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 331,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/28400.jpg",
+        "question": "Does this artwork belong to the type of portrait? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/28400.jpg",
+        "question": "Does this artwork belong to the type of portrait? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 337,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/34627.jpg",
+        "question": "Does this artwork belong to the type of genre? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/34627.jpg",
+        "question": "Does this artwork belong to the type of genre? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Landscape"
+      }
+    },
+    {
+      "doc_id": 364,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/1060.jpg",
+        "question": "Is this artwork created by antoniazzo romano? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/1060.jpg",
+        "question": "Is this artwork created by antoniazzo romano? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 367,
+      "own": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/9153.jpg",
+        "question": "Is this artwork displayed in hospital de san bernardo, seville? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/9153.jpg",
+        "question": "Is this artwork displayed in hospital de san bernardo, seville? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 381,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/20490.jpg",
+        "question": "Does this artwork exist in the form of illumination? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/20490.jpg",
+        "question": "Does this artwork exist in the form of illumination? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 401,
+      "own": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/12902.jpg",
+        "question": "Is this artwork displayed in mus\u00e9e national gustave-moreau, paris? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/12902.jpg",
+        "question": "Is this artwork displayed in mus\u00e9e national gustave-moreau, paris? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 411,
+      "own": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/19452.jpg",
+        "question": "Is this artwork titled the lovesick maiden (detail)? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/19452.jpg",
+        "question": "Is this artwork titled the lovesick maiden (detail)? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 422,
+      "own": {
+        "score": 1.0,
+        "category": "artwork",
+        "question_id": "artwork/23465.jpg",
+        "question": "Is this artwork displayed in private collection? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "artwork",
+        "question_id": "artwork/23465.jpg",
+        "question": "Is this artwork displayed in private collection? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 449,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0070511_shot_0639_img_0.jpg",
+        "question": "Is the person inside the red bounding box called Fernando Lueches? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0070511_shot_0639_img_0.jpg",
+        "question": "Is the person inside the red bounding box called Fernando Lueches? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 453,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0111280_shot_1479_img_2.jpg",
+        "question": "Is the actor inside the red bounding box called Richard Rohrbough? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0111280_shot_1479_img_2.jpg",
+        "question": "Is the actor inside the red bounding box called Richard Rohrbough? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 477,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0056869_shot_0320_img_0.jpg",
+        "question": "Is the person inside the red bounding box called Denise Mack? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0056869_shot_0320_img_0.jpg",
+        "question": "Is the person inside the red bounding box called Denise Mack? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 479,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0105236_shot_0193_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Terence Yin? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0105236_shot_0193_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Terence Yin? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 495,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0068646_shot_0166_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Voltaire Sterling? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0068646_shot_0166_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Voltaire Sterling? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 501,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0070047_shot_0255_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Shawnee Smith? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0070047_shot_0255_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Shawnee Smith? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 505,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0088993_shot_0569_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called James Eckhouse? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0088993_shot_0569_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called James Eckhouse? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 523,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0047396_shot_0333_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Ron Blair? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0047396_shot_0333_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Ron Blair? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 526,
+      "own": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0070735_shot_0818_img_0.jpg",
+        "question": "Is the person inside the red bounding box named Robert Redford? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0070735_shot_0818_img_0.jpg",
+        "question": "Is the person inside the red bounding box named Robert Redford? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 529,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0101410_shot_0105_img_0.jpg",
+        "question": "Is the person inside the red bounding box named David Gore? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0101410_shot_0105_img_0.jpg",
+        "question": "Is the person inside the red bounding box named David Gore? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 533,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0094226_shot_0237_img_2.jpg",
+        "question": "Is the actor inside the red bounding box called Colin Hill? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0094226_shot_0237_img_2.jpg",
+        "question": "Is the actor inside the red bounding box called Colin Hill? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 548,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0112740_shot_1056_img_0.jpg",
+        "question": "Is the person inside the red bounding box named Denzel Washington? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0112740_shot_1056_img_0.jpg",
+        "question": "Is the person inside the red bounding box named Denzel Washington? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 561,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0052357_shot_0511_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Abigail Van Alyn? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0052357_shot_0511_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Abigail Van Alyn? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 563,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0117509_shot_0041_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Max Martini? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0117509_shot_0041_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Max Martini? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 579,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0117500_shot_2467_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Paul J.Q. Lee? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0117500_shot_2467_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Paul J.Q. Lee? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 580,
+      "own": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0082971_shot_0831_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Harrison Ford? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0082971_shot_0831_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Harrison Ford? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 581,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0082971_shot_0831_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Richard Angarola? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0082971_shot_0831_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Richard Angarola? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 587,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0032138_shot_0395_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Eric Schniewind? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0032138_shot_0395_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Eric Schniewind? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 594,
+      "own": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0070379_shot_0569_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Richard Romanus? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0070379_shot_0569_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Richard Romanus? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 599,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0119094_shot_0446_img_2.jpg",
+        "question": "Is the actor inside the red bounding box called Juan Gabriel Pareja? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0119094_shot_0446_img_2.jpg",
+        "question": "Is the actor inside the red bounding box called Juan Gabriel Pareja? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 608,
+      "own": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0079417_shot_0735_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Meryl Streep? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0079417_shot_0735_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Meryl Streep? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 612,
+      "own": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0097216_shot_0381_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Danny Aiello? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0097216_shot_0381_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Danny Aiello? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 615,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0067116_shot_0122_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Russell G. Jones? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0067116_shot_0122_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Russell G. Jones? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 619,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0090756_shot_0135_img_0.jpg",
+        "question": "Is the person inside the red bounding box named Keith Frost? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0090756_shot_0135_img_0.jpg",
+        "question": "Is the person inside the red bounding box named Keith Frost? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 622,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0091042_shot_0098_img_0.jpg",
+        "question": "Is the person inside the red bounding box called Matthew Broderick? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0091042_shot_0098_img_0.jpg",
+        "question": "Is the person inside the red bounding box called Matthew Broderick? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 627,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0118655_shot_0279_img_0.jpg",
+        "question": "Is the person inside the red bounding box called Arthur Birnbaum? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0118655_shot_0279_img_0.jpg",
+        "question": "Is the person inside the red bounding box called Arthur Birnbaum? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 639,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0080684_shot_1574_img_2.jpg",
+        "question": "Is the actor inside the red bounding box called Rodion Salnikov? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0080684_shot_1574_img_2.jpg",
+        "question": "Is the actor inside the red bounding box called Rodion Salnikov? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 649,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0112641_shot_0412_img_1.jpg",
+        "question": "Is the actor inside the red bounding box called Pierre Malherbe? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0112641_shot_0412_img_1.jpg",
+        "question": "Is the actor inside the red bounding box called Pierre Malherbe? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 666,
+      "own": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0095250_shot_0509_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Jean Reno? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0095250_shot_0509_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Jean Reno? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 667,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0095250_shot_0509_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Ralph Meyering Jr.? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0095250_shot_0509_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Ralph Meyering Jr.? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 674,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0096895_shot_0819_img_1.jpg",
+        "question": "Is the person inside the red bounding box called Michael Keaton? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0096895_shot_0819_img_1.jpg",
+        "question": "Is the person inside the red bounding box called Michael Keaton? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 682,
+      "own": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0095765_shot_0008_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Antonella Attili? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0095765_shot_0008_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Antonella Attili? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 685,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0100403_shot_0517_img_0.jpg",
+        "question": "Is the person inside the red bounding box called Alfred Tiaki Hotu? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0100403_shot_0517_img_0.jpg",
+        "question": "Is the person inside the red bounding box called Alfred Tiaki Hotu? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 687,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0064115_shot_0367_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Cooper Murray? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0064115_shot_0367_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Cooper Murray? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 699,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0091867_shot_0422_img_2.jpg",
+        "question": "Is the person inside the red bounding box named Rusty Goffe? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0091867_shot_0422_img_2.jpg",
+        "question": "Is the person inside the red bounding box named Rusty Goffe? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 705,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0090022_shot_0464_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Robert Ryan? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0090022_shot_0464_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Robert Ryan? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 706,
+      "own": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0083866_shot_0364_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Robert MacNaughton? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0083866_shot_0364_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Robert MacNaughton? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 710,
+      "own": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0077416_shot_1442_img_0.jpg",
+        "question": "Is the person inside the red bounding box named Robert De Niro? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0077416_shot_1442_img_0.jpg",
+        "question": "Is the person inside the red bounding box named Robert De Niro? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 736,
+      "own": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0115798_shot_0844_img_1.jpg",
+        "question": "Is the person inside the red bounding box named Jim Carrey? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0115798_shot_0844_img_1.jpg",
+        "question": "Is the person inside the red bounding box named Jim Carrey? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 737,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0115798_shot_0844_img_1.jpg",
+        "question": "Is the person inside the red bounding box named Renee Herlocker? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0115798_shot_0844_img_1.jpg",
+        "question": "Is the person inside the red bounding box named Renee Herlocker? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 739,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0116367_shot_0755_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Ben Crowley? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0116367_shot_0755_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Ben Crowley? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 744,
+      "own": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0077402_shot_1220_img_0.jpg",
+        "question": "Is the person inside the red bounding box named Scott H. Reiniger? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0077402_shot_1220_img_0.jpg",
+        "question": "Is the person inside the red bounding box named Scott H. Reiniger? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 747,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0053221_shot_0197_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Claude-Oliver Rudolph? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0053221_shot_0197_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Claude-Oliver Rudolph? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 753,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0083907_shot_0633_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Kaden Leos? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0083907_shot_0633_img_0.jpg",
+        "question": "Is the actor inside the red bounding box named Kaden Leos? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 765,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0102492_shot_0086_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Heidi Fischer? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0102492_shot_0086_img_0.jpg",
+        "question": "Is the actor inside the red bounding box called Heidi Fischer? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 776,
+      "own": {
+        "score": 0.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0089218_shot_0327_img_0.jpg",
+        "question": "Is the person inside the red bounding box named Sean Astin? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "celebrity",
+        "question_id": "celebrity/tt0089218_shot_0327_img_0.jpg",
+        "question": "Is the person inside the red bounding box named Sean Astin? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 860,
+      "own": {
+        "score": 0.0,
+        "category": "count",
+        "question_id": "count/000000470121.jpg",
+        "question": "Is there only one bottle in the image? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "count",
+        "question_id": "count/000000470121.jpg",
+        "question": "Is there only one bottle in the image? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 861,
+      "own": {
+        "score": 0.0,
+        "category": "count",
+        "question_id": "count/000000470121.jpg",
+        "question": "Is there two bottles in the image? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "count",
+        "question_id": "count/000000470121.jpg",
+        "question": "Is there two bottles in the image? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 879,
+      "own": {
+        "score": 1.0,
+        "category": "count",
+        "question_id": "count/000000410612.jpg",
+        "question": "Is there a total of two ships in the picture? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "count",
+        "question_id": "count/000000410612.jpg",
+        "question": "Is there a total of two ships in the picture? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 880,
+      "own": {
+        "score": 1.0,
+        "category": "count",
+        "question_id": "count/000000423944.jpg",
+        "question": "Is there no person in this picture? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "count",
+        "question_id": "count/000000423944.jpg",
+        "question": "Is there no person in this picture? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 884,
+      "own": {
+        "score": 0.0,
+        "category": "count",
+        "question_id": "count/000000335954.jpg",
+        "question": "Are there two bowls in this image? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "count",
+        "question_id": "count/000000335954.jpg",
+        "question": "Are there two bowls in this image? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 893,
+      "own": {
+        "score": 1.0,
+        "category": "count",
+        "question_id": "count/000000357816.jpg",
+        "question": "Are there five people in this image? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "count",
+        "question_id": "count/000000357816.jpg",
+        "question": "Are there five people in this image? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 910,
+      "own": {
+        "score": 0.0,
+        "category": "count",
+        "question_id": "count/000000450303.jpg",
+        "question": "Are there six people appear in this image? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "count",
+        "question_id": "count/000000450303.jpg",
+        "question": "Are there six people appear in this image? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 919,
+      "own": {
+        "score": 1.0,
+        "category": "count",
+        "question_id": "count/000000556000.jpg",
+        "question": "Are there only three people in the image? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "count",
+        "question_id": "count/000000556000.jpg",
+        "question": "Are there only three people in the image? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 933,
+      "own": {
+        "score": 1.0,
+        "category": "color",
+        "question_id": "color/000000492362.jpg",
+        "question": "Is there a skateboard with black wheels in the image? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "color",
+        "question_id": "color/000000492362.jpg",
+        "question": "Is there a skateboard with black wheels in the image? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 953,
+      "own": {
+        "score": 0.0,
+        "category": "color",
+        "question_id": "color/000000370208.jpg",
+        "question": "Is there a red bicycle with black handlebars in the image? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "color",
+        "question_id": "color/000000370208.jpg",
+        "question": "Is there a red bicycle with black handlebars in the image? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 964,
+      "own": {
+        "score": 0.0,
+        "category": "color",
+        "question_id": "color/000000055072.jpg",
+        "question": "Is there a brown giraffe in the image?  Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "color",
+        "question_id": "color/000000055072.jpg",
+        "question": "Is there a brown giraffe in the image?  Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1130,
+      "own": {
+        "score": 0.0,
+        "category": "position",
+        "question_id": "position/000000426241.jpg",
+        "question": "Is the white mouse on the right of the black keyboard? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "position",
+        "question_id": "position/000000426241.jpg",
+        "question": "Is the white mouse on the right of the black keyboard? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1149,
+      "own": {
+        "score": 1.0,
+        "category": "position",
+        "question_id": "position/000000031248.jpg",
+        "question": "Is there a sofa in the right side of potted plants in the image? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "position",
+        "question_id": "position/000000031248.jpg",
+        "question": "Is there a sofa in the right side of potted plants in the image? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1160,
+      "own": {
+        "score": 0.0,
+        "category": "position",
+        "question_id": "position/000000551660.jpg",
+        "question": "Is the spoon in the bowl? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "position",
+        "question_id": "position/000000551660.jpg",
+        "question": "Is the spoon in the bowl? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1196,
+      "own": {
+        "score": 0.0,
+        "category": "OCR",
+        "question_id": "OCR/0017.jpg",
+        "question": "Is the word in the logo \"hardco industrial construction\"? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "OCR",
+        "question_id": "OCR/0017.jpg",
+        "question": "Is the word in the logo \"hardco industrial construction\"? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1199,
+      "own": {
+        "score": 0.0,
+        "category": "OCR",
+        "question_id": "OCR/0012.jpg",
+        "question": "Is the word in the logo \"case grecque restaurants\"? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "OCR",
+        "question_id": "OCR/0012.jpg",
+        "question": "Is the word in the logo \"case grecque restaurants\"? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1208,
+      "own": {
+        "score": 0.0,
+        "category": "OCR",
+        "question_id": "OCR/0016.jpg",
+        "question": "Is the word in the logo \"shop rite\"? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "OCR",
+        "question_id": "OCR/0016.jpg",
+        "question": "Is the word in the logo \"shop rite\"? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1216,
+      "own": {
+        "score": 0.0,
+        "category": "OCR",
+        "question_id": "OCR/0018.jpg",
+        "question": "Is the word in the logo \"oldsmobile service\"? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "OCR",
+        "question_id": "OCR/0018.jpg",
+        "question": "Is the word in the logo \"oldsmobile service\"? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1217,
+      "own": {
+        "score": 1.0,
+        "category": "OCR",
+        "question_id": "OCR/0018.jpg",
+        "question": "Is the word in the logo \"old mobile service\"? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "OCR",
+        "question_id": "OCR/0018.jpg",
+        "question": "Is the word in the logo \"old mobile service\"? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1218,
+      "own": {
+        "score": 0.0,
+        "category": "OCR",
+        "question_id": "OCR/0010.jpg",
+        "question": "Is the word in the logo \"high time coffee shop\"? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "OCR",
+        "question_id": "OCR/0010.jpg",
+        "question": "Is the word in the logo \"high time coffee shop\"? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1240,
+      "own": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/015543ddea466c54.jpg",
+        "question": "Is this a picture of Galician market square in Skansen, Sanok? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/015543ddea466c54.jpg",
+        "question": "Is this a picture of Galician market square in Skansen, Sanok? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1266,
+      "own": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/0e0511c6e33636ca.jpg",
+        "question": "Is this a picture of Victoria Stadium? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/0e0511c6e33636ca.jpg",
+        "question": "Is this a picture of Victoria Stadium? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1268,
+      "own": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/0cf48b827c9c99de.jpg",
+        "question": "Is this a photo of Beatus Rhenanus Bridge? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/0cf48b827c9c99de.jpg",
+        "question": "Is this a photo of Beatus Rhenanus Bridge? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1278,
+      "own": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/162a77504f4e686e.jpg",
+        "question": "Is this an image of Wieliczka Castle? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/162a77504f4e686e.jpg",
+        "question": "Is this an image of Wieliczka Castle? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1375,
+      "own": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/27a4267b9ea26cd0.jpg",
+        "question": "Is this an image of Festung Heldrungen? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/27a4267b9ea26cd0.jpg",
+        "question": "Is this an image of Festung Heldrungen? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1389,
+      "own": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/0273f127895337be.jpg",
+        "question": "Is this a photo of Huxi Mosque? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/0273f127895337be.jpg",
+        "question": "Is this a photo of Huxi Mosque? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1406,
+      "own": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/18608ca3b785abf8.jpg",
+        "question": "Is this a picture of Solvognen? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/18608ca3b785abf8.jpg",
+        "question": "Is this a picture of Solvognen? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1431,
+      "own": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/04531b37dfe5c991.jpg",
+        "question": "Is this a picture of St. James Episcopal Church (Wilmington, North Carolina)? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/04531b37dfe5c991.jpg",
+        "question": "Is this a picture of St. James Episcopal Church (Wilmington, North Carolina)? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1448,
+      "own": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/070c8d6326a87397.jpg",
+        "question": "Is this an image of Lanxmeerpoort? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/070c8d6326a87397.jpg",
+        "question": "Is this an image of Lanxmeerpoort? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1482,
+      "own": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/07551cf96af77299.jpg",
+        "question": "Is this a photo of Friedhof Wilmersdorf? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/07551cf96af77299.jpg",
+        "question": "Is this a photo of Friedhof Wilmersdorf? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1504,
+      "own": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/01f23b4c5253e9c6.jpg",
+        "question": "Is this a picture of Goethes Gartenhaus? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/01f23b4c5253e9c6.jpg",
+        "question": "Is this a picture of Goethes Gartenhaus? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1522,
+      "own": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/01928acd6dfe6cdd.jpg",
+        "question": "Is this a picture of Watergate Bay? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/01928acd6dfe6cdd.jpg",
+        "question": "Is this a picture of Watergate Bay? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1533,
+      "own": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/030d9a26b7d5755e.jpg",
+        "question": "Is this a photo of Tammisto? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/030d9a26b7d5755e.jpg",
+        "question": "Is this a photo of Tammisto? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1541,
+      "own": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/1d4be36153741972.jpg",
+        "question": "Is this a picture of Motol? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/1d4be36153741972.jpg",
+        "question": "Is this a picture of Motol? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1553,
+      "own": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/0cd8fda9668b3ed2.jpg",
+        "question": "Is this a picture of Kalayar Kovil? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/0cd8fda9668b3ed2.jpg",
+        "question": "Is this a picture of Kalayar Kovil? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1574,
+      "own": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/03dc7df1f1df7b8f.jpg",
+        "question": "Is this a picture of Yevhen Paton Bridge? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/03dc7df1f1df7b8f.jpg",
+        "question": "Is this a picture of Yevhen Paton Bridge? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1587,
+      "own": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/02d11e392d3ab93f.jpg",
+        "question": "Is this an image of Bangkok City Pillar Shrine? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/02d11e392d3ab93f.jpg",
+        "question": "Is this an image of Bangkok City Pillar Shrine? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1609,
+      "own": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/05bcf05b4460d2c3.jpg",
+        "question": "Is this an image of Mode Gakuen Cocoon Tower? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/05bcf05b4460d2c3.jpg",
+        "question": "Is this an image of Mode Gakuen Cocoon Tower? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1613,
+      "own": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/05c3aa404351f407.jpg",
+        "question": "Is this an image of Pieve di Santa Maria a Carli? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/05c3aa404351f407.jpg",
+        "question": "Is this an image of Pieve di Santa Maria a Carli? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1619,
+      "own": {
+        "score": 0.0,
+        "category": "landmark",
+        "question_id": "landmark/1053f4cebfceabd8.jpg",
+        "question": "Is this an image of Kirchenbibliothek St. Marien Barth? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "landmark",
+        "question_id": "landmark/1053f4cebfceabd8.jpg",
+        "question": "Is this an image of Kirchenbibliothek St. Marien Barth? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1656,
+      "own": {
+        "score": 0.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000154.jpg",
+        "question": "Is this picture captured in a place of classroom? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000154.jpg",
+        "question": "Is this picture captured in a place of classroom? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1698,
+      "own": {
+        "score": 1.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000115.jpg",
+        "question": "Is this picture captured in a place of zen garden? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000115.jpg",
+        "question": "Is this picture captured in a place of zen garden? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1712,
+      "own": {
+        "score": 0.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000087.jpg",
+        "question": "Is this photo taken in a place of auto factory? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000087.jpg",
+        "question": "Is this photo taken in a place of auto factory? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1720,
+      "own": {
+        "score": 1.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000191.jpg",
+        "question": "Does this image describe a place of volleyball court outdoor? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000191.jpg",
+        "question": "Does this image describe a place of volleyball court outdoor? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1736,
+      "own": {
+        "score": 0.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000071.jpg",
+        "question": "Is this picture captured in a place of youth hostel? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000071.jpg",
+        "question": "Is this picture captured in a place of youth hostel? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1741,
+      "own": {
+        "score": 1.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000043.jpg",
+        "question": "Does this image describe a place of patio? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000043.jpg",
+        "question": "Does this image describe a place of patio? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1756,
+      "own": {
+        "score": 1.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000120.jpg",
+        "question": "Is this photo taken in a place of legislative chamber? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000120.jpg",
+        "question": "Is this photo taken in a place of legislative chamber? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1760,
+      "own": {
+        "score": 1.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000050.jpg",
+        "question": "Is this picture captured in a place of zen garden? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000050.jpg",
+        "question": "Is this picture captured in a place of zen garden? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1780,
+      "own": {
+        "score": 1.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000085.jpg",
+        "question": "Is this photo taken in a place of flea market indoor? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000085.jpg",
+        "question": "Is this photo taken in a place of flea market indoor? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1857,
+      "own": {
+        "score": 1.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000147.jpg",
+        "question": "Does this image describe a place of creek? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000147.jpg",
+        "question": "Does this image describe a place of creek? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1873,
+      "own": {
+        "score": 1.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000131.jpg",
+        "question": "Is this picture captured in a place of driveway? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000131.jpg",
+        "question": "Is this picture captured in a place of driveway? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1876,
+      "own": {
+        "score": 1.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000083.jpg",
+        "question": "Is this photo taken in a place of cottage? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000083.jpg",
+        "question": "Is this photo taken in a place of cottage? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 1885,
+      "own": {
+        "score": 1.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000160.jpg",
+        "question": "Does this image describe a place of lake natural? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000160.jpg",
+        "question": "Does this image describe a place of lake natural? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 1947,
+      "own": {
+        "score": 1.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000063.jpg",
+        "question": "Does this image describe a place of doorway outdoor? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "scene",
+        "question_id": "scene/Places365_val_00000063.jpg",
+        "question": "Does this image describe a place of doorway outdoor? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 2051,
+      "own": {
+        "score": 0.0,
+        "category": "existence",
+        "question_id": "existence/000000495448.jpg",
+        "question": "Is there a tie in this image? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "existence",
+        "question_id": "existence/000000495448.jpg",
+        "question": "Is there a tie in this image? Please answer yes or no.",
+        "answer": "No",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 2112,
+      "own": {
+        "score": 0.0,
+        "category": "posters",
+        "question_id": "posters/tt1291150.jpg",
+        "question": "Is this movie directed by jonathan liebesman? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "posters",
+        "question_id": "posters/tt1291150.jpg",
+        "question": "Is this movie directed by jonathan liebesman? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 2120,
+      "own": {
+        "score": 0.0,
+        "category": "posters",
+        "question_id": "posters/tt1454029.jpg",
+        "question": "Is this movie titled the help (2011)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "posters",
+        "question_id": "posters/tt1454029.jpg",
+        "question": "Is this movie titled the help (2011)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 2126,
+      "own": {
+        "score": 0.0,
+        "category": "posters",
+        "question_id": "posters/tt0113497.jpg",
+        "question": "Is this movie titled jumanji (1995)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "posters",
+        "question_id": "posters/tt0113497.jpg",
+        "question": "Is this movie titled jumanji (1995)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 2138,
+      "own": {
+        "score": 0.0,
+        "category": "posters",
+        "question_id": "posters/tt0098724.jpg",
+        "question": "Is this movie titled sex, lies, and videotape (1989)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "posters",
+        "question_id": "posters/tt0098724.jpg",
+        "question": "Is this movie titled sex, lies, and videotape (1989)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 2156,
+      "own": {
+        "score": 0.0,
+        "category": "posters",
+        "question_id": "posters/tt1343092.jpg",
+        "question": "Is this movie directed by baz luhrmann? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "posters",
+        "question_id": "posters/tt1343092.jpg",
+        "question": "Is this movie directed by baz luhrmann? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 2160,
+      "own": {
+        "score": 0.0,
+        "category": "posters",
+        "question_id": "posters/tt0068646.jpg",
+        "question": "Is this movie titled the godfather (1972)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "posters",
+        "question_id": "posters/tt0068646.jpg",
+        "question": "Is this movie titled the godfather (1972)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 2180,
+      "own": {
+        "score": 1.0,
+        "category": "posters",
+        "question_id": "posters/tt1099212.jpg",
+        "question": "Is this movie originated from the country or region of usa? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "posters",
+        "question_id": "posters/tt1099212.jpg",
+        "question": "Is this movie originated from the country or region of usa? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 2198,
+      "own": {
+        "score": 1.0,
+        "category": "posters",
+        "question_id": "posters/tt0450259.jpg",
+        "question": "Is this movie originated from the country or region of usa? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      },
+      "official": {
+        "score": 0.0,
+        "category": "posters",
+        "question_id": "posters/tt0450259.jpg",
+        "question": "Is this movie originated from the country or region of usa? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      }
+    },
+    {
+      "doc_id": 2208,
+      "own": {
+        "score": 0.0,
+        "category": "posters",
+        "question_id": "posters/tt1670345.jpg",
+        "question": "Is this movie titled now you see me (2013)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "posters",
+        "question_id": "posters/tt1670345.jpg",
+        "question": "Is this movie titled now you see me (2013)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 2212,
+      "own": {
+        "score": 0.0,
+        "category": "posters",
+        "question_id": "posters/tt0993846.jpg",
+        "question": "Is this movie titled the wolf of wall street (2013)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "posters",
+        "question_id": "posters/tt0993846.jpg",
+        "question": "Is this movie titled the wolf of wall street (2013)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 2230,
+      "own": {
+        "score": 0.0,
+        "category": "posters",
+        "question_id": "posters/tt0182789.jpg",
+        "question": "Is this movie titled bicentennial man (1999)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "posters",
+        "question_id": "posters/tt0182789.jpg",
+        "question": "Is this movie titled bicentennial man (1999)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 2232,
+      "own": {
+        "score": 0.0,
+        "category": "posters",
+        "question_id": "posters/tt0074119.jpg",
+        "question": "Is this movie directed by alan j. pakula? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "posters",
+        "question_id": "posters/tt0074119.jpg",
+        "question": "Is this movie directed by alan j. pakula? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 2242,
+      "own": {
+        "score": 0.0,
+        "category": "posters",
+        "question_id": "posters/tt0425210.jpg",
+        "question": "Is this movie titled lucky number slevin (2006)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "posters",
+        "question_id": "posters/tt0425210.jpg",
+        "question": "Is this movie titled lucky number slevin (2006)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 2248,
+      "own": {
+        "score": 0.0,
+        "category": "posters",
+        "question_id": "posters/tt0107808.jpg",
+        "question": "Is this movie titled a perfect world (1993)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "posters",
+        "question_id": "posters/tt0107808.jpg",
+        "question": "Is this movie titled a perfect world (1993)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 2302,
+      "own": {
+        "score": 0.0,
+        "category": "posters",
+        "question_id": "posters/tt0318627.jpg",
+        "question": "Is this movie titled resident evil: apocalypse (2004)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "posters",
+        "question_id": "posters/tt0318627.jpg",
+        "question": "Is this movie titled resident evil: apocalypse (2004)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 2352,
+      "own": {
+        "score": 0.0,
+        "category": "posters",
+        "question_id": "posters/tt0499549.jpg",
+        "question": "Is this movie directed by james cameron? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "posters",
+        "question_id": "posters/tt0499549.jpg",
+        "question": "Is this movie directed by james cameron? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    },
+    {
+      "doc_id": 2368,
+      "own": {
+        "score": 0.0,
+        "category": "posters",
+        "question_id": "posters/tt0093565.jpg",
+        "question": "Is this movie titled moonstruck (1987)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "No"
+      },
+      "official": {
+        "score": 1.0,
+        "category": "posters",
+        "question_id": "posters/tt0093565.jpg",
+        "question": "Is this movie titled moonstruck (1987)? Please answer yes or no.",
+        "answer": "Yes",
+        "prediction": "Yes"
+      }
+    }
+  ]
+}

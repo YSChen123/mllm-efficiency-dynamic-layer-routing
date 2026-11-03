@@ -1,0 +1,86 @@
+[
+  {
+    "task": "scienceqa_img",
+    "budget": 1.0,
+    "paper": 67.8,
+    "reproduced": 67.42687159147248,
+    "delta": -0.3731284085275206
+  },
+  {
+    "task": "pope",
+    "budget": 1.0,
+    "paper": 85.9,
+    "reproduced": 85.44474393530996,
+    "delta": -0.4552560646900474
+  },
+  {
+    "task": "mme",
+    "budget": 1.0,
+    "paper": 1521.0,
+    "reproduced": 1463.2140856342537,
+    "delta": -57.785914365746294
+  },
+  {
+    "task": "textvqa_val",
+    "budget": 1.0,
+    "paper": 57.0,
+    "reproduced": 56.2760000000001,
+    "delta": -0.7239999999998972
+  },
+  {
+    "task": "scienceqa_img",
+    "budget": 0.85,
+    "paper": 67.4,
+    "reproduced": 66.7823500247893,
+    "delta": -0.6176499752107105
+  },
+  {
+    "task": "pope",
+    "budget": 0.85,
+    "paper": 86.4,
+    "reproduced": 86.52719665271967,
+    "delta": 0.12719665271966107
+  },
+  {
+    "task": "mme",
+    "budget": 0.85,
+    "paper": 1487.2,
+    "reproduced": 1475.6149459783915,
+    "delta": -11.585054021608585
+  },
+  {
+    "task": "textvqa_val",
+    "budget": 0.85,
+    "paper": 54.5,
+    "reproduced": 54.75600000000007,
+    "delta": 0.2560000000000713
+  },
+  {
+    "task": "scienceqa_img",
+    "budget": 0.6,
+    "paper": 66.9,
+    "reproduced": 66.43529995042142,
+    "delta": -0.4647000495785818
+  },
+  {
+    "task": "pope",
+    "budget": 0.6,
+    "paper": 86.1,
+    "reproduced": 85.98764684510112,
+    "delta": -0.11235315489886943
+  },
+  {
+    "task": "mme",
+    "budget": 0.6,
+    "paper": 1463.8,
+    "reproduced": 1439.4371748699482,
+    "delta": -24.36282513005176
+  },
+  {
+    "task": "textvqa_val",
+    "budget": 0.6,
+    "paper": 47.7,
+    "reproduced": 46.858,
+    "delta": -0.8420000000000059
+  }
+]

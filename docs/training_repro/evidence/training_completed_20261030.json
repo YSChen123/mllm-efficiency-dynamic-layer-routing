@@ -1,0 +1,44 @@
+{
+  "finished": {
+    "step": 5197,
+    "epoch": 0.9998737411693973,
+    "time": 1793321341.7200894
+  },
+  "checkpoint": "/home/SigConv/cys/AdaLLaVA/training_repro/runs/adallava-L-20261027/checkpoint-5197",
+  "checkpoint_bytes": 81936816731,
+  "ranks": [
+    {
+      "rank": 0,
+      "steps": 5197,
+      "total": {
+        "time": 1793321341.7205696,
+        "event": "TRAINING_TOTAL",
+        "rank": 0,
+        "wall_seconds": 201548.35196041688,
+        "gpu_hours": 111.97130664467605,
+        "mode": "formal"
+      },
+      "peak_allocated_bytes": 62674506240,
+      "peak_reserved_bytes": 69912756224,
+      "last_loss": 0.6608,
+      "mean_step_loss": 0.8708566480661916
+    },
+    {
+      "rank": 1,
+      "steps": 5197,
+      "total": {
+        "time": 1793321333.465453,
+        "event": "TRAINING_TOTAL",
+        "rank": 1,
+        "wall_seconds": 201540.24533057213,
+        "gpu_hours": 111.96680296142895,
+        "mode": "formal"
+      },
+      "peak_allocated_bytes": 62673507840,
+      "peak_reserved_bytes": 69990350848,
+      "last_loss": 0.6608,
+      "mean_step_loss": 0.8708566480661916
+    }
+  ],
+  "training_flops": "NOT_MEASURED"
+}

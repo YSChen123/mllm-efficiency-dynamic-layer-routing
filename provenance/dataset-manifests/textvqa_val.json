@@ -1,0 +1,26 @@
+{
+  "task": "textvqa_val",
+  "repo": "lmms-lab/textvqa",
+  "config": null,
+  "split": "validation",
+  "revision": "9c0699cd19768ac5ab97568f6b3cbac4c0062884",
+  "count": 5000,
+  "features": "{'image_id': Value(dtype='string', id=None), 'question_id': Value(dtype='int32', id=None), 'question': Value(dtype='string', id=None), 'question_tokens': Sequence(feature=Value(dtype='string', id=None), length=-1, id=None), 'image': Image(decode=True, id=None), 'image_width': Value(dtype='int32', id=None), 'image_height': Value(dtype='int32', id=None), 'flickr_original_url': Value(dtype='string', id=None), 'flickr_300k_url': Value(dtype='string', id=None), 'answers': Sequence(feature=Value(dtype='string', id=None), length=-1, id=None), 'image_classes': Sequence(feature=Value(dtype='string', id=None), length=-1, id=None), 'set_name': Value(dtype='string', id=None), 'ocr_tokens': Sequence(feature=Value(dtype='string', id=None), length=-1, id=None)}",
+  "fingerprint": "2d3f231da6c3d25b",
+  "download_size": 8097805782,
+  "dataset_size": 12990608594.496,
+  "info_version": "0.0.0",
+  "cache": "/home/SigConv/cys/AdaLLaVA/datasets/textvqa_val/arrow",
+  "splits": {
+    "validation": 5000
+  },
+  "arrow_files": {
+    "validation": [
+      "/home/SigConv/cys/AdaLLaVA/datasets/textvqa_val/arrow/lmms-lab___textvqa/default-7e6540d5af82adba/0.0.0/9c0699cd19768ac5ab97568f6b3cbac4c0062884/textvqa-validation-00000-of-00002.arrow",
+      "/home/SigConv/cys/AdaLLaVA/datasets/textvqa_val/arrow/lmms-lab___textvqa/default-7e6540d5af82adba/0.0.0/9c0699cd19768ac5ab97568f6b3cbac4c0062884/textvqa-validation-00001-of-00002.arrow"
+    ]
+  },
+  "prepared_unix_time": 1792841245.592912,
+  "preparation_scope": "validation-only at unchanged pinned revision",
+  "baseline_identity_verified_samples": 5000
+}

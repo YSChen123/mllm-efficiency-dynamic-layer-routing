@@ -1,0 +1,20 @@
+{
+  "upstream_changed_files": {
+    "AdaLLaVA": [],
+    "LLaVA": [],
+    "lmms-eval": [
+      "lmms_eval/tasks/mmbench/_default_template_mmbench_en_yaml",
+      "lmms_eval/tasks/mme/mme.yaml",
+      "lmms_eval/tasks/pope/pope.yaml",
+      "lmms_eval/tasks/scienceqa/scienceqa_img.yaml",
+      "lmms_eval/tasks/textvqa/_default_template_textvqa_yaml"
+    ]
+  },
+  "executed_scripts_byte_identical": 57,
+  "local_analysis_and_test_scripts_byte_identical": 3,
+  "python_files_parsed": 470,
+  "files_scanned": 1728,
+  "bytes": 34338581,
+  "secret_hits": 0,
+  "main_document_broken_links": 0
+}

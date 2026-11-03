@@ -1,0 +1,69 @@
+    def _save_checkpoint(self, save_dir, tag, client_state={}, exclude_frozen_parameters=False):
+
+        save_path = self._get_ckpt_name(save_dir, tag)
+
+        zero_optimizer_state = self.zero_optimization() or self.bfloat16_enabled()
+
+        save_frozen_param = self.zero_optimization_partition_gradients() and not exclude_frozen_parameters
+
+        # A hack to save the checkpointing directory. Pipeline parallelism overrides
+        # module_state_dict() and uses this path to save the model. module_state_dict()
+        # then instead just returns None.  The module_state_dict() implementation in
+        # PipelineEngine expects the save path to be set in self._curr_ckpt_path.
+        self._curr_ckpt_path = os.path.join(save_dir, tag)
+        module = self.module_state_dict(exclude_frozen_parameters=exclude_frozen_parameters)
+        self._curr_ckpt_path = None
+
+        state = dict(module=module,
+                     buffer_names=self._get_buffer_names(),
+                     optimizer=self.optimizer.state_dict() if self.optimizer and not zero_optimizer_state else None,
+                     param_shapes=self._get_zero_param_shapes() if self.optimizer and zero_optimizer_state else None,
+                     frozen_param_shapes=self._get_zero_frozen_param_attributes(self._get_param_shape_func)
+                     if save_frozen_param else None,
+                     shared_params=self._get_shared_params() if self.optimizer and zero_optimizer_state else None,
+                     frozen_param_fragments=self._get_zero_frozen_param_attributes(self._get_param_fragment_func)
+                     if save_frozen_param else None,
+                     lr_scheduler=self.lr_scheduler.state_dict() if self.lr_scheduler is not None else None,
+                     data_sampler=self.training_dataloader.data_sampler.state_dict() if
+                     (self.training_dataloader is not None and self.curriculum_learning_enabled()) else None,
+                     random_ltd=self.random_ltd_scheduler.state_dict() if self.random_ltd_enabled() else None,
+                     sparse_tensor_module_names=self.sparse_tensor_module_names,
+                     skipped_steps=self.skipped_steps,
+                     global_steps=self.global_steps,
+                     global_samples=self.global_samples,
+                     dp_world_size=self.seq_dp_world_size,
+                     mp_world_size=self.mp_world_size,
+                     ds_config=self.config,
+                     ds_version=version)
+        state.update(client_state)
+
+        if self.save_non_zero_checkpoint:
+            log_dist(message=f'Saving model checkpoint: {save_path}', ranks=[0, 1])
+            self.checkpoint_engine.save(state, save_path)
+
+    def state_dict(self):
+        """
+        Returns a dict containing the current state of this :class:`FP16_Optimizer` instance.
+        This dict contains attributes of :class:`FP16_Optimizer`, as well as the state_dict
+        of the contained Pytorch optimizer.
+        Example::
+            checkpoint = {}
+            checkpoint['model'] = model.state_dict()
+            checkpoint['optimizer'] = optimizer.state_dict()
+            torch.save(checkpoint, "saved.pth")
+        """
+        if self.elastic_checkpoint:
+            raise NotImplementedError("ZeRO-3 does not yet support elastic checkpointing, please disable for now.")
+
+        return self._rigid_state_dict()
+
+    def _save_zero_checkpoint(self, save_path, tag):
+        zero_checkpoint_name = self._get_zero_ckpt_name(save_path, tag)
+        zero_sd = dict(optimizer_state_dict=self.optimizer.state_dict(), ds_config=self.config, ds_version=version)
+        self.checkpoint_engine.save(zero_sd, zero_checkpoint_name)
+
+        if self.global_rank == 0:
+            self._copy_recovery_script(save_path)
+        ckpt_type = 'zero' if self.zero_optimization() else 'bf16_zero'
+        logger.info(f'{ckpt_type} checkpoint saved {zero_checkpoint_name}')
+

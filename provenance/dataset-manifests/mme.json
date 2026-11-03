@@ -1,0 +1,24 @@
+{
+  "task": "mme",
+  "repo": "lmms-lab/MME",
+  "config": null,
+  "split": "test",
+  "revision": "d6c9023f017b564f7b3ccccf5348166bce8fdbcd",
+  "count": 2374,
+  "features": "{'question_id': Value(dtype='string', id=None), 'image': Image(decode=True, id=None), 'question': Value(dtype='string', id=None), 'answer': Value(dtype='string', id=None), 'category': Value(dtype='string', id=None)}",
+  "fingerprint": "ce71e24d4bd018fb",
+  "download_size": 864018279,
+  "dataset_size": 1733070098.024,
+  "info_version": "0.0.0",
+  "cache": "/home/SigConv/cys/AdaLLaVA/datasets/mme/arrow",
+  "splits": {
+    "test": 2374
+  },
+  "arrow_files": {
+    "test": [
+      "/home/SigConv/cys/AdaLLaVA/datasets/mme/arrow/lmms-lab___mme/default/0.0.0/d6c9023f017b564f7b3ccccf5348166bce8fdbcd/mme-test-00000-of-00002.arrow",
+      "/home/SigConv/cys/AdaLLaVA/datasets/mme/arrow/lmms-lab___mme/default/0.0.0/d6c9023f017b564f7b3ccccf5348166bce8fdbcd/mme-test-00001-of-00002.arrow"
+    ]
+  },
+  "prepared_unix_time": 1792835928.110494
+}
