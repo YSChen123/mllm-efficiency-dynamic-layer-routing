@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+runtime/
+local/
+.env
+.env.*
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.whl
+*.arrow
+*.parquet
