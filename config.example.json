@@ -1,0 +1,11 @@
+{
+  "runtime": "runtime/roe",
+  "base_model": "runtime/assets/llava-v1.5-7b",
+  "vision_model": "runtime/assets/clip-vit-large-patch14-336",
+  "train_source": "runtime/data/llava_v1_5_mix665k.json",
+  "train_subset": "runtime/data/llava_v1_5_mix665k_50.json",
+  "images_dir": "runtime/data/images",
+  "checkpoint": "runtime/checkpoints/llava-v1.5-7b-roe30",
+  "cache": "runtime/cache/huggingface",
+  "train_gpus": [0, 1]
+}

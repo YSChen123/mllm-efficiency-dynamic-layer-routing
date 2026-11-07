@@ -13,3 +13,17 @@ local/
 *.whl
 *.arrow
 *.parquet
+.venvs/
+config.local.json
+*.local.json
+*.log
+*.zip
+*.tar
+*.tar.gz
+*.jsonl
+data/
+checkpoints/
+wandb/
+*.so
+*.dll
+*.egg-info/

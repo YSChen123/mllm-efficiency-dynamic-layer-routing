@@ -1,0 +1,60 @@
+[
+  {
+    "name": "llava-v1.5-7b",
+    "repo_id": "liuhaotian/llava-v1.5-7b",
+    "files": {
+      "config.json": {
+        "bytes": 1161,
+        "sha256": "f112de882e31171a105f0d3f69d9e6e8700a40149f0944f4b507d3a41789e492"
+      },
+      "generation_config.json": {
+        "bytes": 124,
+        "sha256": "e453057ea6a89d902d7326b3addbe312a7a6c8faabf777a521c9f2d563f79b8d"
+      },
+      "pytorch_model-00001-of-00002.bin": {
+        "bytes": 9976634558,
+        "sha256": "492fdfa63cf314097d99da81a3586d54a97adc1471a0ae0535f5caa269b86314"
+      },
+      "pytorch_model-00002-of-00002.bin": {
+        "bytes": 3542276251,
+        "sha256": "c0eb94eb3fa578a4c63567f2eca6b0acf6a44a891c257aca0df88ffa891de72e"
+      },
+      "pytorch_model.bin.index.json": {
+        "bytes": 27068,
+        "sha256": "487578d3f7ec21c057596d0f9dc71084acc349eb8f13bd8b5af86c26460f2d31"
+      },
+      "special_tokens_map.json": {
+        "bytes": 438,
+        "sha256": "719833ff26ac897a3ec8ed946028a135de2a351470af59b4008744ab1f0ee9b7"
+      },
+      "tokenizer.model": {
+        "bytes": 499723,
+        "sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+      },
+      "tokenizer_config.json": {
+        "bytes": 749,
+        "sha256": "cf01145c6de57f061991ff871e85d0402c38481f968daea8874c431cd0c7740f"
+      }
+    },
+    "revision": "4481d270cc22fd5c4d1bb5df129622006ccd9234"
+  },
+  {
+    "name": "clip-vit-large-patch14-336",
+    "repo_id": "openai/clip-vit-large-patch14-336",
+    "files": {
+      "config.json": {
+        "bytes": 4757,
+        "sha256": "51b1c14aabcdf639c4a0370eeda1010b773bbe1df78319c7d0f5882c22ac0ac0"
+      },
+      "preprocessor_config.json": {
+        "bytes": 316,
+        "sha256": "d253881f65322dc546df59cf925a408e5538b8ecb5a1b496cdd36af9992686d4"
+      },
+      "pytorch_model.bin": {
+        "bytes": 1711974081,
+        "sha256": "c6032c2e0caae3dc2d4fba35535fa6307dbb49df59c7e182b1bc4b3329b81801"
+      }
+    },
+    "revision": "ce19dc912ca5cd21c8a653c79e251e808ccabcd1"
+  }
+]

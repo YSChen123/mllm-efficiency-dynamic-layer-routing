@@ -1,0 +1,179 @@
+{
+  "date": "2026-11-08",
+  "status": "passed",
+  "official_commit": "4f529e468d396246dd96f44fb7e13bd3cba61261",
+  "official_tracked_source_clean": true,
+  "checks": [
+    {
+      "name": "train_import",
+      "returncode": 0,
+      "seconds": 3.4561755657196045
+    },
+    {
+      "name": "train_render",
+      "returncode": 0,
+      "seconds": 0.04243922233581543
+    },
+    {
+      "name": "tiny_train_stages",
+      "returncode": 0,
+      "seconds": 3.407576322555542
+    },
+    {
+      "name": "pinned_task_contexts",
+      "returncode": 0,
+      "seconds": 12.011914730072021
+    },
+    {
+      "name": "gpu_smoke_scienceqa_img",
+      "returncode": 0,
+      "seconds": 32.23598384857178
+    },
+    {
+      "name": "gpu_smoke_gqa",
+      "returncode": 0,
+      "seconds": 32.488903760910034
+    },
+    {
+      "name": "gpu_smoke_seedbench_image",
+      "returncode": 0,
+      "seconds": 32.79400610923767
+    }
+  ],
+  "regression_tests_passed": 9,
+  "tiny_training_stages": [
+    {
+      "stage": 0,
+      "loss": 4.133504867553711,
+      "gradient_tensors": 25,
+      "finite": true
+    },
+    {
+      "stage": 1,
+      "loss": 4.159696102142334,
+      "gradient_tensors": 27,
+      "finite": true
+    },
+    {
+      "stage": 2,
+      "loss": 4.159638404846191,
+      "gradient_tensors": 27,
+      "finite": true
+    }
+  ],
+  "train_versions": {
+    "torch": "2.7.1+cu128",
+    "transformers": "4.31.0",
+    "accelerate": "0.34.2",
+    "deepspeed": "0.9.5"
+  },
+  "task_context_validation": [
+    {
+      "task": "scienceqa_img",
+      "samples": 2017,
+      "revision": "69dd4d6b67373d38f96a5badd5d24d0eb5bcdc50",
+      "all_text_contexts_and_targets_match_original": true,
+      "text_target_sha256": "f0c3c61c4e67d0690702b263935eba5f3d2de3776d15730a6de7bddd53edf759"
+    },
+    {
+      "task": "gqa",
+      "samples": 12578,
+      "revision": "a6e72d6e1b912da88af8b2f9eba05d5ea8ec2dd8",
+      "all_text_contexts_and_targets_match_original": true,
+      "text_target_sha256": "7831523fd96a84fc0d7eb1905881606416e3bd5bddcf28ac8c62cf3723cc3387"
+    },
+    {
+      "task": "seedbench_image",
+      "samples": 14233,
+      "revision": "74c4ea0cee96786739e4ccb97d227818a05ae752",
+      "all_text_contexts_and_targets_match_original": true,
+      "text_target_sha256": "126e7a100e7538a637da23a3dff1e8bbb78fa07ead33d308c7116e3f4c922314"
+    }
+  ],
+  "gpu_smokes": [
+    {
+      "task": "gqa",
+      "mode": "dynamic",
+      "samples": 8,
+      "metrics": {
+        "alias": "gqa_release",
+        "exact_match,none": 0.625,
+        "exact_match_stderr,none": 0.18298126367784995
+      },
+      "actual_skip_rate": 0.1484375,
+      "precision_retries": 0,
+      "empty_answers": 0
+    },
+    {
+      "task": "scienceqa_img",
+      "mode": "dynamic",
+      "samples": 16,
+      "metrics": {
+        "alias": "scienceqa_img_release",
+        "exact_match,none": 0.6875,
+        "exact_match_stderr,none": 0.11967838846954226
+      },
+      "actual_skip_rate": 0.1015625,
+      "precision_retries": 0,
+      "empty_answers": 0
+    },
+    {
+      "task": "seedbench_image",
+      "mode": "dynamic-fp16",
+      "samples": 8,
+      "metrics": {
+        "alias": "seedbench_image_release",
+        "seed_image,none": 0.25,
+        "seed_image_stderr,none": "N/A"
+      },
+      "actual_skip_rate": 0.33984375,
+      "precision_retries": 0,
+      "empty_answers": 0
+    }
+  ],
+  "relocated_checkpoint_vision_path_tested": true,
+  "canonical_offline_clip_cache_tested": true,
+  "direct_task_check_without_bytecode_environment_guard_tested": true,
+  "training_data_validation": {
+    "source_rows": 665298,
+    "selected_rows": 399180,
+    "unique_image_paths": 240041,
+    "subset_sha256": "01887ef01c4eb677f6db84e8c6face8a7cebaa2191f0b72d7cdf31238c8915d7",
+    "image_paths_checked": true,
+    "missing_images": 0,
+    "first_missing": []
+  },
+  "source_sha256_lf": {
+    "roe_repro/__init__.py": "3ae4287bb353b8a921e1b36f5abf95e816b3267024326d1d3710e7b03de7ce3d",
+    "roe_repro/assets.py": "e58e60b86c24c6fa62c87b3750b64591a8d88c636460337457864296b5e9cac7",
+    "roe_repro/check.py": "ffac135737a0e01eb05e0e2411607bd5c7581082ad3528abbed44059783f1540",
+    "roe_repro/check_tasks.py": "b4e2af345a09b11cd89f43bebf64ad3f49f835a47445ac72812b50724460fa20",
+    "roe_repro/common.py": "d292ef1fd5275e316d215e7eab97a43d07e1adba1170da272a35207fb88c2069",
+    "roe_repro/dynamic_model.py": "2645541ce750f2dbeb4333036782d9d5b30d4d2d6a42b1c7adf3597089e4b0a7",
+    "roe_repro/dynamic_model_protected.py": "ef2d95fadf781950e73186ac99c1762f708512f59aba8f127c903967db11cab8",
+    "roe_repro/eval_entry.py": "ddb526820f33653f0cab3447a9481465604f0d7129c169d2e14e5bf07e5adf37",
+    "roe_repro/evaluate.py": "f72da1603243ec4af8943da07041758e6385f52e2aa6eb168528c6e1e1714a41",
+    "roe_repro/precision_retry.py": "2a4dd5de15c1bc048370b4d7557c4b03056765ec776b231beba1c26c56f4f9ac",
+    "roe_repro/prepare_data.py": "7e69545157abd2ee697e4b3f8e71f67e92957e1b8a4463e16c605abb977fa9cd",
+    "roe_repro/routing_backend.py": "f7618c7bb8f2b0878be2899c5af554c3881cee0c7c9cb1889988de3cb6232e2b",
+    "roe_repro/seed_image_utils.py": "12efcc590091d78266252137be16d53de86c1145051d7624ad1384629c4aabb3",
+    "roe_repro/status.py": "50dd9b5d2c4fb7de0e5b81d47f1a4d3b44842d6aa333c3f8bb2e09274504ff7d",
+    "roe_repro/tasks.py": "dfd75c3d8ca8ca1f0f5708246cec35411b7c7ea696c94f6e09a640d0a7e883a2",
+    "roe_repro/train.py": "254c77440b1a9ca082f48afc49e9a1fcf019dc3d04abe08f0ff4025518b799bc",
+    "scripts/bootstrap_upstream.py": "d94e508b75fbdc83d06d610e8950b5cf30e36a6e09ecb59e17a042086f86c6a1",
+    "scripts/setup_env.sh": "2a6d3661667003907d8eab1d97289b0117d1579b9100b546608c3172480a517d",
+    "scripts/tiny_train_smoke.py": "8f35dc04ef6fae4f9a124583b6b75449313b3705ff7ae1eafda0d3e9deed2a77",
+    "tests/test_portable.py": "656adb0badd016fdca2335a087f1c4c40f0b6013b7480cbcfda4e4e73da11c86",
+    "tests/test_precision_retry.py": "efa88b030a8aadd70854927927025bc00a2c2e00dd135c7c13034f640c7dca6b",
+    "tests/test_routing_backend.py": "b0be32920d1dd5734f1a5a905d09b9affa19db28776b40df4e21afed28e2f890",
+    "requirements/eval.txt": "e2c39944871edc6cf250c9e9527b1514d361b30fb5f2df5e7bb9ae8023343f9b",
+    "requirements/train.txt": "f74ace3c5473eb93dcba405e39aa4079ccd806f398cdd499130c3b6df1ea7596"
+  },
+  "fresh_environment_reinstalled": false,
+  "full_training_repeated": false,
+  "resolved_publication_check_issues": [
+    "Disabled bytecode writes before importing upstream and restored only test-generated tracked bytecode.",
+    "Allowed legitimate linked image directories while rejecting absolute paths and parent traversal."
+  ],
+  "scope": "Existing runtime environments and shared read-only assets; tiny CPU training and limited real 7B GPU evaluation, not a repeated full training run."
+}

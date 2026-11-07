@@ -1,0 +1,22 @@
+# Recorded training core. Install Torch/cu128 first; see scripts/setup_env.sh.
+transformers==4.31.0
+tokenizers==0.13.3
+accelerate==0.34.2
+deepspeed==0.9.5
+pydantic==1.10.13
+peft==0.4.0
+numpy==1.26.4
+pillow==10.2.0
+datasets==2.16.1
+pyarrow==17.0.0
+fsspec==2023.10.0
+huggingface-hub==0.25.0
+sentencepiece==0.1.99
+protobuf==3.20.0
+wandb==0.16.0
+einops==0.6.1
+timm==0.6.13
+scipy==1.15.3
+ninja==1.11.1.1
+packaging==23.2
+psutil==7.2.2

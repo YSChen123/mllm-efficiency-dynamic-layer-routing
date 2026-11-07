@@ -1,0 +1,10 @@
+{
+  "llava_v1_5_mix665k.json": {
+    "bytes": 1029887963,
+    "sha256": "ce959ce6e23073ee1cd1a8a2ef1c633768c10d4174327b8b2dc7113b91af6cf8"
+  },
+  "llava_v1_5_mix665k_50.json": {
+    "bytes": 741452109,
+    "sha256": "01887ef01c4eb677f6db84e8c6face8a7cebaa2191f0b72d7cdf31238c8915d7"
+  }
+}
