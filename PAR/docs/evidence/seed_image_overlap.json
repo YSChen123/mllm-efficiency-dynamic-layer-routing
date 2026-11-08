@@ -1,0 +1,16 @@
+{
+  "scope": "ACTUAL_FIXED_CANONICAL_SELECTIONS_VS_OFFICIAL_SEED_IMAGES",
+  "seed_unique_images": 5624,
+  "splits": {
+    "training": {
+      "count": 5000,
+      "seed_decoded_RGB_overlap": 0,
+      "overlaps": []
+    },
+    "validation": {
+      "count": 256,
+      "seed_decoded_RGB_overlap": 0,
+      "overlaps": []
+    }
+  }
+}

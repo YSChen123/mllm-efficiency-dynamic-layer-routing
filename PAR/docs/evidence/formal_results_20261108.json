@@ -1,0 +1,116 @@
+{
+  "status": "VERIFIED_COMPLETE_V5_AND_PORTABLE_ACCEPTANCE",
+  "verified_at": "2026-11-08T21:10:05.643283+08:00",
+  "scores": {
+    "joint_v5_selected": {
+      "POPE": 85.97431394535585,
+      "SEED_I": 63.184149511698166,
+      "SEED_correct": 8993
+    },
+    "joint_v5_causal_control": {
+      "POPE": 84.37995248844962,
+      "SEED_I": 61.336331061617365,
+      "SEED_correct": 8730
+    }
+  },
+  "paper": {
+    "POPE": 76.1,
+    "SEED_I": 62.7
+  },
+  "paper_deltas": {
+    "joint_v5_selected": {
+      "POPE": 9.874313945355851,
+      "SEED_I": 0.48414951169816334
+    },
+    "joint_v5_causal_control": {
+      "POPE": 8.279952488449624,
+      "SEED_I": -1.363668938382638
+    }
+  },
+  "causal_minus_bidirectional": {
+    "POPE": -1.5943614569062277,
+    "SEED_I": -1.8478184500808013
+  },
+  "default_selection_unchanged": "minimum_independent_validation_KL_not_test_scores",
+  "selected_parameters": {
+    "trial_id": "bidirectional_b4",
+    "epoch": 3,
+    "attention_mode": "bidirectional",
+    "global_batch_size": 4,
+    "learning_rate": 0.0001,
+    "pairing": "extremes",
+    "mean_routed_KL": 0.14174960219861532
+  },
+  "all_default_predictions_logits_actions_match_accepted_v4": true,
+  "all4_training_trajectories": [
+    {
+      "id": "bidirectional_b4",
+      "attention_mode": "bidirectional",
+      "global_batch_size": 4,
+      "steps": 3750,
+      "epoch_checkpoints": {
+        "1": "3b5618dddf7260edd093c5ee430f29e12cda9e5d10edefd7642801bb069ee40b",
+        "3": "4de0e802b6b2cbd9a5c649255451ce73ee3506da1826bc7fa348084eb944d942"
+      }
+    },
+    {
+      "id": "causal_b4",
+      "attention_mode": "causal",
+      "global_batch_size": 4,
+      "steps": 3750,
+      "epoch_checkpoints": {
+        "1": "3bd945567f3a98e3ae053c06742e0202a9fb723e5cb8d5732a5dd69708fd5ffd",
+        "3": "2a9578b5d7edd5db0c390c80e01e5de24fe26da62e5652876ab2c7392e68dc4a"
+      }
+    },
+    {
+      "id": "bidirectional_b16",
+      "attention_mode": "bidirectional",
+      "global_batch_size": 16,
+      "steps": 939,
+      "epoch_checkpoints": {
+        "1": "bddaac79b01493072b0c642ed0df8a43aaa67008a26b0e25b2fa02e10d7cd940",
+        "3": "dc1392508257f524cfa865bb6ab0880a6b99dd8f39a545c602557e02a644c00b"
+      }
+    },
+    {
+      "id": "causal_b16",
+      "attention_mode": "causal",
+      "global_batch_size": 16,
+      "steps": 939,
+      "epoch_checkpoints": {
+        "1": "95878a2608b4561ac6a4b1b30f7082a23b49cfaf9d93e3953e9cb1427f699ef0",
+        "3": "226467d5401e2018c2c92bf5d365342ae18633877fe5fed11847b056751c59d6"
+      }
+    }
+  ],
+  "source_repository_clean": true,
+  "legacy_v4_engineering_gate_valid": true,
+  "portable_acceptance_sha256": "207268d3955c3c379a7a08048623cf7869a92b2b28d1a156aff27858fd41c3e2",
+  "seed_original_images_all14233_RGB_equal": true,
+  "fixed_training_and_validation_SEED_image_overlap": 0,
+  "formal_artifact_sha256": {
+    "results/joint_v5_selected/reconstruction/pope_reference/config.json": "962e03287b468f3afa52ed02d479c92b679b1893ab72ee4018d8b73839a19b0b",
+    "results/joint_v5_selected/reconstruction/pope_reference/metrics.json": "380ee022e3fce4164595035eef99318c20b1dde620b6a80a2980f4e3b0c9869a",
+    "results/joint_v5_selected/reconstruction/pope_reference/verification.json": "4dbb47848157ff18aea44f7b3383d3dff604ef01d09a45821a2995902cb3d010",
+    "results/joint_v5_selected/reconstruction/pope_reference/predictions.jsonl": "ad7e436e5929134b886b2cfbd782f77e61bd842631657c90ab0a65854b6d14e8",
+    "results/joint_v5_selected/reconstruction/seed_image/config.json": "e499167310c78808d89a9c4ad17f3858489aa45bcb7f5844c569e2863e6721dd",
+    "results/joint_v5_selected/reconstruction/seed_image/metrics.json": "1685803d0a59fe304e69052a4c8cdf2d2f8163a0c764a5ced7e39af79fff83b6",
+    "results/joint_v5_selected/reconstruction/seed_image/verification.json": "ca5c54b3f1388f6a99fdaf97b92db1f94dd485b93a7795a16be6a780ee66ec80",
+    "results/joint_v5_selected/reconstruction/seed_image/predictions.jsonl": "426cb4b1e2da20a6b198bbdbe267b275abdd8434934b26573f6c6e02897c0f7a",
+    "results/joint_v5_causal_control/reconstruction/pope_reference/config.json": "e24fdf1f8de4601138c5b77b8ab91d2791b6d4b995fb823c1ce062be3217268e",
+    "results/joint_v5_causal_control/reconstruction/pope_reference/metrics.json": "7361cf3e2559bdb2cac1ad1047cf52f7126b5bca9f83fd5279acbcd7b3eb8df7",
+    "results/joint_v5_causal_control/reconstruction/pope_reference/verification.json": "3d83b3ca6657767439a6148718a3e8ab3ba5678bcc74c984443a0ab525445058",
+    "results/joint_v5_causal_control/reconstruction/pope_reference/predictions.jsonl": "5db1cef24b0e1f265f9965a778281ccc58147957d606d6f81313f325522b43e7",
+    "results/joint_v5_causal_control/reconstruction/seed_image/config.json": "5f99a77a4f27ddb3aa3b717bb27dcd363c4c429520188c229707d478cefe54c9",
+    "results/joint_v5_causal_control/reconstruction/seed_image/metrics.json": "a9d158dbcd5bae5e0c439a5862a08cf1ad2f658191d034f82541468ff03cf4cf",
+    "results/joint_v5_causal_control/reconstruction/seed_image/verification.json": "24f1e5329a6c39368df335219f20aa21bbab4f63e50144ffd3cdc1ce9504024c",
+    "results/joint_v5_causal_control/reconstruction/seed_image/predictions.jsonl": "d7de1f1c9cddb45031dca205cffafc530c2b00a2533db24e1e0ea84916729761"
+  },
+  "limits": [
+    "Unpublished author router/training settings remain unverified",
+    "POPE discrepancy not uniquely explained",
+    "portable full training parity used explicitly converted authenticated features, raw parity has8 inputs",
+    "Second physical server/GPU architecture not tested"
+  ]
+}

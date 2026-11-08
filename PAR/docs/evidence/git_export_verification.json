@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "scope": "EXACT_COMMITTED_GIT_TREE_EXPORT_FRESH_DIRECTORY",
+  "commit": "efcd342",
+  "cpu_tests": 40,
+  "module_imported_from_fresh_tree": true,
+  "implementation_sha256": "f16e2696dcb53cdb66a98ac429c0074eded7ec6d8cc887a0c83384caab66edff",
+  "dependency_lock_dry_run": "PASS",
+  "bash_syntax": "PASS"
+}
