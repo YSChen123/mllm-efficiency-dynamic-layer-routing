@@ -1,0 +1,11 @@
+{
+  "reported_epochs": [1, 3],
+  "trials": [
+    {"id": "bidirectional_b4", "attention_mode": "bidirectional", "global_batch_size": 4},
+    {"id": "causal_b4", "attention_mode": "causal", "global_batch_size": 4},
+    {"id": "bidirectional_b16", "attention_mode": "bidirectional", "global_batch_size": 16},
+    {"id": "causal_b16", "attention_mode": "causal", "global_batch_size": 16}
+  ],
+  "selection": "validation_KL_only; all eight candidates required; tie: fewer epochs, lower LR, trial ID",
+  "test_scores_used_for_selection": false
+}

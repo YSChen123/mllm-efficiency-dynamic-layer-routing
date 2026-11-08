@@ -1,0 +1,16 @@
+# Install the matching torch/torchvision CUDA wheels first; see scripts/setup.sh.
+transformers==4.37.2
+tokenizers==0.15.1
+accelerate==0.21.0
+sentencepiece==0.1.99
+peft==0.7.1
+einops==0.6.1
+einops-exts==0.0.4
+timm==0.6.13
+huggingface-hub==0.25.0
+shortuuid==1.0.13
+safetensors==0.4.5
+numpy==1.26.4
+Pillow==10.2.0
+protobuf==3.20.3
+requests==2.32.4

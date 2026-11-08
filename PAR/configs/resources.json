@@ -1,0 +1,122 @@
+{
+  "backbone": {
+    "repo_id": "liuhaotian/llava-v1.5-7b",
+    "repo_type": "models",
+    "revision": "4481d270cc22fd5c4d1bb5df129622006ccd9234",
+    "api_url": "https://huggingface.co/api/models/liuhaotian/llava-v1.5-7b?blobs=true",
+    "files": [
+      {
+        "name": "config.json",
+        "size": 1161,
+        "git_blob_sha1": "0ce10a15ac0e34d9f7c25f598e6a237d88b99a46",
+        "lfs_sha256": null
+      },
+      {
+        "name": "generation_config.json",
+        "size": 124,
+        "git_blob_sha1": "0a2211d8cb8868624f2556fe27d138585e151fea",
+        "lfs_sha256": null
+      },
+      {
+        "name": "pytorch_model-00001-of-00002.bin",
+        "size": 9976634558,
+        "git_blob_sha1": "5cc87dfff58e36c1b04a5dd64aa669ed88dd5167",
+        "lfs_sha256": "492fdfa63cf314097d99da81a3586d54a97adc1471a0ae0535f5caa269b86314"
+      },
+      {
+        "name": "pytorch_model-00002-of-00002.bin",
+        "size": 3542276251,
+        "git_blob_sha1": "220c3d95d4ae7681650d330bfa306dc9d4742adf",
+        "lfs_sha256": "c0eb94eb3fa578a4c63567f2eca6b0acf6a44a891c257aca0df88ffa891de72e"
+      },
+      {
+        "name": "pytorch_model.bin.index.json",
+        "size": 27068,
+        "git_blob_sha1": "239de7c61647372780b7546a8df572ed42f7fc57",
+        "lfs_sha256": null
+      },
+      {
+        "name": "special_tokens_map.json",
+        "size": 438,
+        "git_blob_sha1": "14761dcf1466dc232bd41de9c21d4c617b15755e",
+        "lfs_sha256": null
+      },
+      {
+        "name": "tokenizer.model",
+        "size": 499723,
+        "git_blob_sha1": "6c00c742ce03c627d6cd5b795984876fa49fa899",
+        "lfs_sha256": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "size": 749,
+        "git_blob_sha1": "740756b4bef305e27d0bb4d2e1a40dd8847797f7",
+        "lfs_sha256": null
+      }
+    ]
+  },
+  "vision": {
+    "repo_id": "openai/clip-vit-large-patch14-336",
+    "repo_type": "models",
+    "revision": "ce19dc912ca5cd21c8a653c79e251e808ccabcd1",
+    "api_url": "https://huggingface.co/api/models/openai/clip-vit-large-patch14-336?blobs=true",
+    "files": [
+      {
+        "name": "config.json",
+        "size": 4757,
+        "git_blob_sha1": "e9c5a5dc325b017eda0b6e802f79283a1f68bf27",
+        "lfs_sha256": null
+      },
+      {
+        "name": "preprocessor_config.json",
+        "size": 316,
+        "git_blob_sha1": "a4604d0a1564fa0c45a6ff087bada5066a6335ea",
+        "lfs_sha256": null
+      },
+      {
+        "name": "pytorch_model.bin",
+        "size": 1711974081,
+        "git_blob_sha1": "d599938f87909461098a7856a49c4842c84fc214",
+        "lfs_sha256": "c6032c2e0caae3dc2d4fba35535fa6307dbb49df59c7e182b1bc4b3329b81801"
+      },
+      {
+        "name": "special_tokens_map.json",
+        "size": 389,
+        "git_blob_sha1": "9bfb42aa97dcd61e89f279ccaee988bccb4fabae",
+        "lfs_sha256": null
+      },
+      {
+        "name": "tokenizer.json",
+        "size": 2224041,
+        "git_blob_sha1": "564c0ebd5ce29c4ee4864004aee693deadd3128c",
+        "lfs_sha256": null
+      },
+      {
+        "name": "tokenizer_config.json",
+        "size": 844,
+        "git_blob_sha1": "24feaf785502565f990d348aafa501c254710ed8",
+        "lfs_sha256": null
+      },
+      {
+        "name": "vocab.json",
+        "size": 862328,
+        "git_blob_sha1": "182766ce89b439768edadda342519f33802f5364",
+        "lfs_sha256": null
+      }
+    ]
+  },
+  "training_annotation": {
+    "repo_id": "liuhaotian/LLaVA-Instruct-150K",
+    "repo_type": "datasets",
+    "revision": "9d451dc7629cfe0469f6ae4432b765cd603d5fcb",
+    "api_url": "https://huggingface.co/api/datasets/liuhaotian/LLaVA-Instruct-150K?blobs=true",
+    "files": [
+      {
+        "name": "llava_instruct_80k.json",
+        "size": 130697744,
+        "git_blob_sha1": "9a93a8b3d584c8a807b978cdc491a23a18976c8a",
+        "lfs_sha256": "3e5bd621239cf8f95580e75832b532879b4acb93c0a26df64b4dfcf39f544c06"
+      }
+    ]
+  }
+}

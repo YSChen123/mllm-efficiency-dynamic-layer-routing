@@ -1,0 +1,29 @@
+{
+  "seed": {
+    "repo_id": "AILab-CVC/SEED-Bench",
+    "revision": "81cb1571b8a3a30af2e62073b8d2054418350f0a",
+    "filename": "SEED-Bench.json",
+    "size": 7170715,
+    "git_blob_sha1": "6ac0ded106c15e0b76420015eecc325eddde1f25"
+  },
+  "seed_images": {
+    "repo_id": "AILab-CVC/SEED-Bench",
+    "revision": "81cb1571b8a3a30af2e62073b8d2054418350f0a",
+    "filename": "SEED-Bench-image.zip",
+    "size": 1678769671,
+    "sha256": "3817f6998a1fcf750250ad141370bb065f3e8e54632e9c107c78b2823a9e79ce"
+  },
+  "pope": {
+    "commit": "e3e39262c85a6a83f26cf5094022a782cb0df58d",
+    "sha256": {
+      "adversarial": "1d8f0906a9b50c05640f6f23abfac97523be2a1bed28f7eadc63b811699b2d26",
+      "popular": "5b16653023bf4f64d57eb0d168259de6627f5cde7538b85ebed3cc33034aa6cc",
+      "random": "c16b65d2df6d70bb0814c8a4375833d39cdb09928fd936d3fc546491efa37f35"
+    }
+  },
+  "baseline": {
+    "repo": "https://github.com/ASGO-MM-Lab/Pruning-All-Rounder.git",
+    "commit": "6d9b39acdce382c4da228345fb6c7dc6736b8899",
+    "subdirectory": "LLaVA"
+  }
+}

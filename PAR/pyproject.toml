@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68,<81", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "par-public-reproduction"
+version = "0.1.0"
+description = "Portable public-settings reconstruction of PAR (ICCV 2025), with disclosed reproduction gaps"
+requires-python = ">=3.10,<3.11"
+dependencies = []
+
+[project.scripts]
+par-repro = "par_repro.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["par_repro*"]
