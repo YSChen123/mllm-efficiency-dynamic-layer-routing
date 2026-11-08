@@ -69,7 +69,7 @@ def main():
         verify_evaluation(workspace, config, args.result_dir)
     elif args.command == 'convert-checkpoint':
         from par_repro.checkpoints import convert_checkpoint
-        convert_checkpoint(args.source, args.destination, config)
+        convert_checkpoint(args.source, args.destination, config, workspace)
     elif args.command == 'run':
         from par_repro.pipeline import run
         run(workspace, config, args.gpus.split(','), args.smoke)

@@ -1,7 +1,8 @@
 from pathlib import Path
 import json
 import math
-from par_repro.io import atomic_json, file_sha, bind_identity, code_sha, object_sha, reconcile_step_log
+from par_repro.io import atomic_json, file_sha, bind_identity, code_sha, object_sha, reconcile_step_log, require_resume_checkpoint, model_resource_identity
+from par_repro.config import scientific_config
 
 
 def collate(items):
@@ -50,29 +51,38 @@ def train(workspace, config, name, resume=False, max_steps=None):
         raise ValueError('Trial name must be a single directory component')
     target = workspace / 'checkpoints' / name
     target.mkdir(parents=True, exist_ok=True)
-    identity = {'config': config, 'code_sha256': code_sha(), 'preference_manifest_sha256': file_sha(folder / 'manifest.json'), 'scope': manifest['scope']}
+    identity = {'config': scientific_config(config), 'code_sha256': code_sha(), 'preference_manifest_sha256': file_sha(folder / 'manifest.json'), 'scope': manifest['scope']}
     bind_identity(target / 'identity.json', identity)
     digest = object_sha(identity)
+    model_resources = model_resource_identity(workspace)
     torch.manual_seed(settings['seed'])
     model = ControlledRouter(PaperRouterConfig(**config['router']), settings['attention_mode']).cuda().float()
     optimizer = torch.optim.AdamW(model.parameters(), lr=settings['learning_rate'], betas=tuple(settings['betas']),
                                  eps=settings['eps'], weight_decay=settings['weight_decay'])
     checkpoint = target / 'latest.pt'
+    require_resume_checkpoint(checkpoint, resume)
     step = 0
     if checkpoint.exists():
-        if not resume:
-            raise ValueError('Existing checkpoint requires --resume')
         state = torch.load(checkpoint, map_location='cpu', weights_only=True)
-        if state['identity'] != digest or state['configuration'] != config:
+        if state['identity'] != digest or scientific_config(state['configuration']) != scientific_config(config):
             raise ValueError('Resume identity changed')
         model.load_state_dict(state['router'], strict=True)
         optimizer.load_state_dict(state['optimizer'])
         torch.set_rng_state(state['rng_cpu'])
-        torch.cuda.set_rng_state(state['rng_cuda'])
+        if state['rng_cuda'] is not None:
+            torch.cuda.set_rng_state(state['rng_cuda'])
         step = state['step']
         reconcile_step_log(target / 'steps.jsonl', step)
     elif (target / 'steps.jsonl').exists():
         raise ValueError('Unsaved previous attempt has no checkpoint; preserve it and use a new trial directory')
+    else:
+        state = {'portable_format_version': 1, 'configuration': config, 'router': model.state_dict(), 'step': 0, 'epoch': 0,
+                 'model_resources': model_resources,
+                 'identity': digest, 'scope': manifest['scope'], 'optimizer': optimizer.state_dict(),
+                 'rng_cpu': torch.get_rng_state(), 'rng_cuda': torch.cuda.get_rng_state() if torch.cuda.is_initialized() else None}
+        temporary = checkpoint.with_suffix('.tmp')
+        torch.save(state, temporary)
+        temporary.replace(checkpoint)
     batches = [b for e in range(settings['epochs']) for b in epoch_batches(e, settings['global_batch_size'], count)]
     total = len(batches)
     end = total if max_steps is None else min(total, max_steps)
@@ -97,8 +107,9 @@ def train(workspace, config, name, resume=False, max_steps=None):
             log.write(json.dumps({'step': step, 'epoch': epoch, 'loss': loss, 'effective_global_batch': len(batches[at])}) + '\n')
             log.flush()
             state = {'portable_format_version': 1, 'configuration': config, 'router': model.state_dict(), 'step': step, 'epoch': epoch,
+                     'model_resources': model_resources,
                      'identity': digest, 'scope': manifest['scope'], 'optimizer': optimizer.state_dict(),
-                     'rng_cpu': torch.get_rng_state(), 'rng_cuda': torch.cuda.get_rng_state()}
+                     'rng_cpu': torch.get_rng_state(), 'rng_cuda': torch.cuda.get_rng_state() if torch.cuda.is_initialized() else None}
             if step % 250 == 0 or step == end:
                 temporary = checkpoint.with_suffix('.tmp')
                 torch.save(state, temporary)

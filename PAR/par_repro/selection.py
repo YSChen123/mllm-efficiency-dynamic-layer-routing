@@ -1,7 +1,7 @@
 from pathlib import Path
 import json
 import math
-from par_repro.io import atomic_json, file_sha, code_sha
+from par_repro.io import atomic_json, file_sha, code_sha, model_resource_identity
 
 
 def choose_candidate(rows, expected):
@@ -38,6 +38,8 @@ def select(workspace, config, search):
             if file_sha(path) != report['snapshots'][str(epoch)]:
                 raise ValueError('Candidate checksum mismatch')
             router, state = load_router(path)
+            if state['model_resources'] != model_resource_identity(workspace):
+                raise ValueError('Candidate model/source identity differs from validation resources')
             settings = state['configuration']['training']
             if settings['attention_mode'] != trial['attention_mode'] or settings['global_batch_size'] != trial['global_batch_size']:
                 raise ValueError('Wrong effective candidate settings')

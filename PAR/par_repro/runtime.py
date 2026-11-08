@@ -2,26 +2,34 @@ import os
 import sys
 import subprocess
 import json
+import time
 from pathlib import Path
 from par_repro.config import resolve
 
 
-def require_idle_gpu():
+def require_idle_gpu(attempts=10, interval=1.):
     physical = os.environ.setdefault('CUDA_VISIBLE_DEVICES', '0')
     if not physical.isdecimal():
         raise ValueError('Expose one GPU per CLI worker with CUDA_VISIBLE_DEVICES=<ID>')
-    value = subprocess.check_output(['nvidia-smi', '-i', physical, '--query-gpu=memory.used,utilization.gpu',
-        '--format=csv,noheader,nounits'], text=True)
-    used, utilization = map(int, value.strip().split(','))
-    if used >= 1000 or utilization >= 5:
-        raise RuntimeError(f'GPU{physical} busy ({used}MiB, {utilization}%); choose an idle GPU')
+    for attempt in range(attempts):
+        value = subprocess.check_output(['nvidia-smi', '-i', physical, '--query-gpu=memory.used,utilization.gpu',
+            '--format=csv,noheader,nounits'], text=True)
+        used, utilization = map(int, value.strip().split(','))
+        if used < 1000 and utilization < 5:
+            return
+        if used >= 1000 or attempt == attempts - 1:
+            raise RuntimeError(f'GPU{physical} busy ({used}MiB, {utilization}%); choose an idle GPU')
+        time.sleep(interval)
 
 
 def load_frozen(workspace, config):
     import torch
     import transformers
+    import PIL
     if not torch.__version__.startswith('2.7.1') or transformers.__version__ != '4.37.2':
         raise ValueError('Reference runtime requires Torch2.7.1 and Transformers4.37.2')
+    if PIL.__version__ != '10.2.0':
+        raise ValueError('Reference image decoding requires Pillow10.2.0')
     prepared = json.loads((Path(workspace) / 'prepared.json').read_text())
     if prepared['status'] != 'PREPARED' or prepared['model_paths'] != config['model']:
         raise ValueError('Run prepare for these exact model paths before inference')

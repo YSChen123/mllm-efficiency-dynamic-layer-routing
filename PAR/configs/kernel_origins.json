@@ -4,55 +4,63 @@
     "source_sha256": "eab0cef70eeb8afa9ed26dd6b0c7458458eb5218f982b114102d69aa28a45a8c",
     "packaged": "par_repro/math_core.py",
     "packaged_sha256": "eab0cef70eeb8afa9ed26dd6b0c7458458eb5218f982b114102d69aa28a45a8c",
-    "changes": "import namespace only"
+    "changes": "import namespace and line endings only",
+    "packaged_hash_policy": "UTF8_LF"
   },
   {
     "source": "reconstruction/layer_skip.py",
     "source_sha256": "df39253816c7daea2c17eec0492531a32339b6a2a415ae3edbaaf1bbf0b43841",
     "packaged": "par_repro/layer_skip.py",
     "packaged_sha256": "df39253816c7daea2c17eec0492531a32339b6a2a415ae3edbaaf1bbf0b43841",
-    "changes": "none"
+    "changes": "line endings normalized only",
+    "packaged_hash_policy": "UTF8_LF"
   },
   {
     "source": "reconstruction/router.py",
     "source_sha256": "27e454b20983c5fe5179eb94772e78a4323d23a73f7fbad76646ba328c700807",
     "packaged": "par_repro/_base_router.py",
     "packaged_sha256": "27e454b20983c5fe5179eb94772e78a4323d23a73f7fbad76646ba328c700807",
-    "changes": "none"
+    "changes": "line endings normalized only",
+    "packaged_hash_policy": "UTF8_LF"
   },
   {
     "source": "reconstruction/joint_router.py",
     "source_sha256": "ec1557fa8b341431eb21f1ddc946fd1737c354f75e1942270d71d61ff298d289",
     "packaged": "par_repro/_joint_router.py",
     "packaged_sha256": "fa5ab4411310492f5ee870bee290226cf91dd081c2ce5e3690dd0352099b8548",
-    "changes": "import namespace only"
+    "changes": "import namespace and line endings only",
+    "packaged_hash_policy": "UTF8_LF"
   },
   {
     "source": "reconstruction/v3/router.py",
     "source_sha256": "0afc1ff9a120f54e562f7c64ed5d3085a83d4370ebc8c2ebdf7d2e25046bb65f",
     "packaged": "par_repro/_paper_router.py",
-    "packaged_sha256": "3f2b034c484e965fd8b78e32bf8664d1c4dc5cc2ec2ccf9663deab2de5dc29b3",
-    "changes": "import namespace only"
+    "packaged_sha256": "ab94b80497f773eef029205c0a7d5405943e604cfeb692c1938171f3b1d0539c",
+    "changes": "import namespace and line endings only",
+    "packaged_hash_policy": "UTF8_LF"
   },
   {
     "source": "reconstruction/v5/router.py",
     "source_sha256": "afc0cf8ca8a84f53da2488a1baad121b3a040d245237cb5eaa1b9fe9dd74acde",
     "packaged": "par_repro/router.py",
     "packaged_sha256": "72071c6943766af568a144f7209f08d1ddc62952aa353dd8294ab65bdebebbf7",
-    "changes": "import namespace only"
+    "changes": "import namespace and line endings only",
+    "packaged_hash_policy": "UTF8_LF"
   },
   {
     "source": "reconstruction/v3/core.py",
     "source_sha256": "cba1ec84f40fb8800b3fc656824e6e174423feec23a2e63048d437ffcb259bcd",
     "packaged": "par_repro/pruning.py",
-    "packaged_sha256": "f39790575fa9a23a76636cd052fac372b85ba7d521d16e3771c963035cc70b8d",
-    "changes": "import namespace only"
+    "packaged_sha256": "22a5c348f3c42db5e1b9d1ce349eaa5afea7d84118278f0c97c174dbd1fb63fe",
+    "changes": "import namespace and line endings only",
+    "packaged_hash_policy": "UTF8_LF"
   },
   {
     "source": "reconstruction/v5/core.py",
     "source_sha256": "9ef15620c7f7ce967d62e8cfd5317671d31e9341321a4f4dbca438a2cf005058",
     "packaged": "par_repro/batching.py",
     "packaged_sha256": "9ef15620c7f7ce967d62e8cfd5317671d31e9341321a4f4dbca438a2cf005058",
-    "changes": "none"
+    "changes": "line endings normalized only",
+    "packaged_hash_policy": "UTF8_LF"
   }
 ]

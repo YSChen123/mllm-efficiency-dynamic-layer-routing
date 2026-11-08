@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "scope": "SAME_PHYSICAL_SERVER_INDEPENDENT_ENVIRONMENT_AND_NEW_WORKSPACE",
+  "environment": {
+    "python": "3.10.22",
+    "torch": "2.7.1+cu128",
+    "transformers": "4.37.2",
+    "pillow": "10.2.0",
+    "pip_check": "PASS",
+    "all_imports_from_independent_venv": true,
+    "old_shared_site_paths_present": false
+  },
+  "cpu_tests": {
+    "passed": 40,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "raw_workspace_smoke": {
+    "training_inputs": 4,
+    "validation_inputs": 4,
+    "updates": 4,
+    "POPE_examples": 6,
+    "SEED_examples": 4,
+    "scope": "SMOKE_ONLY",
+    "stage": "COMPLETED"
+  },
+  "raw_preference_equivalence": {
+    "training_inputs": 4,
+    "validation_inputs": 4,
+    "VQ_QK_response_actions_labels_equal": true,
+    "KL_tolerance": 1e-08
+  },
+  "full_training_engine_equivalence": {
+    "samples": 5000,
+    "steps": 3750,
+    "epoch1_and_epoch3_all_weights_bitwise_equal": true,
+    "source": "explicitly_converted_authenticated_old_preferences_not_full_raw_regeneration"
+  },
+  "reference_inference_equivalence": {
+    "models": [
+      "Layer-only",
+      "Joint"
+    ],
+    "fixed_cases": 20,
+    "logits_actions_full_text_equal": true
+  },
+  "implementation_sha256": "f16e2696dcb53cdb66a98ac429c0074eded7ec6d8cc887a0c83384caab66edff",
+  "pip_freeze_sha256": "ae422836f222b42e85e097bab5bdc776d3c5c486b724500d0bfb2b6c75c5a8d4",
+  "limits": [
+    "Not a full5000 raw preference regeneration through portable package",
+    "Not a second physical server/GPU architecture test",
+    "Author complete settings remain unpublished"
+  ],
+  "evidence_sha256": {
+    "numerical_parity.json": "5d3b9cac4ca7296c1d6100899dd2ed1acb8d6a0d4e2a8826e70458983122a107",
+    "full_training_engine_parity.json": "9cdada07467a7957535722e5d6bc65711e8f06ec40c15578c42e627de819d40f",
+    "reference_inference_parity.json": "1ca4b8567e494dfecaa8d2886783a038c9a9c22e5426f32c10a32edb00330343"
+  }
+}

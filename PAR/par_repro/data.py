@@ -37,7 +37,12 @@ def seed_prompt(case):
 
 
 def read_annotations(workspace):
+    from par_repro.prepare import verify_resource
     folder = Path(workspace) / 'annotations'
+    protocol = json.loads((package_root() / 'configs/annotations.json').read_text())
+    for category, digest in protocol['pope']['sha256'].items():
+        verify_resource(folder / f'coco_pope_{category}.json', {'sha256': digest})
+    verify_resource(folder / 'SEED-Bench.json', protocol['seed'])
     pope = []
     for category in ['adversarial', 'popular', 'random']:
         pope.extend(dict(json.loads(line), category=category) for line in (folder / f'coco_pope_{category}.json').read_text().splitlines())
@@ -79,7 +84,7 @@ def resolve_image(root, name):
 def index_seed_images(root):
     index = {}
     for path in Path(root).rglob('*'):
-        if path.is_file() and path.suffix.lower() in ['.jpg', '.jpeg', '.png', '.webp']:
+        if path.is_file() and not path.name.startswith('.') and path.suffix.lower() in ['', '.jpg', '.jpeg', '.png', '.webp', '.bmp', '.gif', '.tif', '.tiff']:
             if path.stem in index:
                 raise ValueError('Duplicate SEED image stem: ' + path.stem)
             index[path.stem] = path

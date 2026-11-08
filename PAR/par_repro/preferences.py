@@ -1,7 +1,7 @@
 from pathlib import Path
 import json
 import hashlib
-from par_repro.io import atomic_json, bind_identity, file_sha, code_sha, object_sha, package_root
+from par_repro.io import atomic_json, bind_identity, file_sha, code_sha, object_sha, package_root, model_resource_identity
 from par_repro.config import resolve
 from par_repro.data import resolve_image
 
@@ -29,7 +29,8 @@ def build_preferences(workspace, config, split='training', limit=None, shard=0, 
     (folder / 'features').mkdir(exist_ok=True)
     identity = {'mode': mode, 'split': split, 'count': count, 'scope': 'FORMAL' if count == len(rows) else 'SMOKE_ONLY',
                 'selection_sha256': file_sha(selection), 'code_sha256': code_sha(), 'M': m,
-                'generation': config['generation'], 'models': config['model'], 'noise_variance': 10.,
+                'generation': config['generation'], 'model_resources': model_resource_identity(workspace),
+                'attention_backend': config['model']['attention_backend'], 'noise_variance': 10.,
                 'likelihood': 'independent_Bernoulli', 'KL': 'Full||pruned_response_token_mean_including_EOS'}
     bind_identity(folder / 'identity.json', identity)
     digest = object_sha(identity)
@@ -134,6 +135,8 @@ def checked_preferences(workspace, mode, split):
     identity = json.loads((folder / 'identity.json').read_text())
     if manifest['status'] != 'VERIFIED' or manifest['identity'] != object_sha(identity):
         raise ValueError('Invalid preference manifest')
+    if identity['model_resources'] != model_resource_identity(workspace):
+        raise ValueError('Preference model/source resource identity differs')
     for name, digest in manifest['files'].items():
         path = (folder / name).resolve()
         if not path.is_relative_to(folder.resolve()) or file_sha(path) != digest:

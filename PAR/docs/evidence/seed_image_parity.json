@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "count": 14233,
+  "same_RGB_count": 14233,
+  "mismatch_count": 0,
+  "mismatch_examples": [],
+  "decoder": "Pillow10.2.0",
+  "original_repo": "AILab-CVC/SEED-Bench",
+  "original_revision": "81cb1571b8a3a30af2e62073b8d2054418350f0a",
+  "original_archive_sha256": "3817f6998a1fcf750250ad141370bb065f3e8e54632e9c107c78b2823a9e79ce",
+  "cached_dataset_revision": "74c4ea0cee96786739e4ccb97d227818a05ae752",
+  "annotation_sha256": "ebd4aab3f602e5e7826c29824a0e63fe803308bf628dce2787972c523664d567"
+}

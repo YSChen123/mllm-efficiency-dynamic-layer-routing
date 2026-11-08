@@ -1,10 +1,32 @@
 from pathlib import Path
 import json
 import hashlib
-from par_repro.io import atomic_json, bind_identity, file_sha, object_sha, code_sha, check_prediction_prefix
-from par_repro.config import resolve
+from par_repro.io import atomic_json, bind_identity, file_sha, object_sha, code_sha, check_prediction_prefix, model_resource_identity
+from par_repro.config import resolve, scientific_config
 from par_repro.data import read_annotations, resolve_image, index_seed_images, seed_prompt
 from par_repro.metrics import pope_scores, seed_scores
+
+
+def benchmark_resource_identity(cases, paths, annotation_hashes, decoder):
+    if len(cases) != len(paths):
+        raise ValueError('Ordered image coverage mismatch')
+    return {'annotation_hashes': annotation_hashes, 'ordered_cases_sha256': object_sha(cases), 'decoder': decoder,
+            'ordered_images': [{'key': [str(r['category']), str(r['question_id'])],
+                                'source_name': r.get('image', r.get('data_id')), 'file_sha256': file_sha(p)}
+                               for r, p in zip(cases, paths)]}
+
+
+def benchmark_resources(workspace, config, benchmark, cases):
+    import PIL
+    annotations = Path(workspace) / 'annotations'
+    names = [f'coco_pope_{c}.json' for c in ['adversarial', 'popular', 'random']] if benchmark == 'pope' else ['SEED-Bench.json']
+    hashes = {name: file_sha(annotations / name) for name in names}
+    if benchmark == 'pope':
+        paths = [resolve_image(resolve(workspace, config['data']['coco_val']), r['image']) for r in cases]
+    else:
+        index = index_seed_images(resolve(workspace, config['data']['seed_images']))
+        paths = [index[Path(r['data_id']).stem] for r in cases]
+    return benchmark_resource_identity(cases, paths, hashes, 'Pillow' + PIL.__version__), paths
 
 
 def benchmark_cases(workspace, config, benchmark, limit=None):
@@ -35,10 +57,15 @@ def evaluate(workspace, config, benchmark, checkpoint=None, name='selected', lim
     full_count = 8910 if benchmark == 'pope' else 14233
     scope = 'FORMAL' if limit is None else 'SMOKE_ONLY'
     target = workspace / 'results' / name / (benchmark if limit is None else f'{benchmark}_smoke{len(cases)}')
+    if Path(name).name != name or name in ['.', '..', '']:
+        raise ValueError('Evaluation name must be a single directory component')
     target.mkdir(parents=True, exist_ok=True)
     digest = file_sha(checkpoint) if checkpoint else None
     keys = [(str(r['category']), str(r['question_id'])) for r in cases]
-    identity = {'config': config, 'checkpoint_sha256': digest, 'benchmark': benchmark, 'scope': scope,
+    resources, image_paths = benchmark_resources(workspace, config, benchmark, cases)
+    bind_identity(target / 'resources.json', resources)
+    identity = {'config': scientific_config(config), 'model_resources': model_resource_identity(workspace),
+                'benchmark_resources_sha256': object_sha(resources), 'checkpoint_sha256': digest, 'benchmark': benchmark, 'scope': scope,
                 'count': len(cases), 'ordered_keys_sha256': object_sha(keys), 'code_sha256': code_sha()}
     bind_identity(target / 'identity.json', identity)
     path = target / 'predictions.jsonl'
@@ -52,15 +79,17 @@ def evaluate(workspace, config, benchmark, checkpoint=None, name='selected', lim
     model, tokenizer, vision = load_frozen(workspace, config)
     router, state = load_router(checkpoint) if checkpoint else (None, None)
     if state is not None:
-        if state['configuration'] != config:
+        if scientific_config(state['configuration']) != scientific_config(config) or state['model_resources'] != model_resource_identity(workspace):
             raise ValueError('Evaluation config differs from checkpoint effective settings')
         if scope == 'FORMAL' and state['scope'] != 'FORMAL':
             raise ValueError('Smoke checkpoint cannot run formal benchmark')
-    seed_index = index_seed_images(resolve(workspace, config['data']['seed_images'])) if benchmark == 'seed' else None
     with path.open('a') as handle:
         for i in range(start, len(cases)):
             case = cases[i]
-            image_path = resolve_image(resolve(workspace, config['data']['coco_val']), case['image']) if benchmark == 'pope' else seed_index[Path(case['data_id']).stem]
+            image_path = image_paths[i]
+            image_digest = file_sha(image_path)
+            if image_digest != resources['ordered_images'][i]['file_sha256']:
+                raise ValueError('Benchmark image changed during evaluation')
             image = Image.open(image_path).convert('RGB')
             with torch.inference_mode():
                 inputs = prepare_image(model, vision, tokenizer, image, case['question'])
@@ -72,6 +101,7 @@ def evaluate(workspace, config, benchmark, checkpoint=None, name='selected', lim
                         raise ValueError('Cached and uncached decoding differ')
             row = {'category': str(case['category']), 'question_id': case['question_id'], 'question': case['question'],
                    'full_prompt': inputs['prompt'], 'label': case.get('label'), 'answer': case.get('answer'),
+                   'image_file_sha256': image_digest,
                    'image_rgb_sha256': hashlib.sha256(image.tobytes()).hexdigest(), **result}
             handle.write(json.dumps(row) + '\n')
             handle.flush()
@@ -94,14 +124,21 @@ def verify_evaluation(workspace, config, folder):
     benchmark = identity['benchmark']
     limit = None if identity['scope'] == 'FORMAL' else identity['count']
     cases = benchmark_cases(workspace, config, benchmark, limit)
+    resources, _ = benchmark_resources(workspace, config, benchmark, cases)
+    if resources != json.loads((folder / 'resources.json').read_text()) or object_sha(resources) != identity['benchmark_resources_sha256']:
+        raise ValueError('Benchmark images/annotations differ from evaluated resources')
+    if scientific_config(config) != identity['config'] or model_resource_identity(workspace) != identity['model_resources']:
+        raise ValueError('Scientific settings/model resources differ from evaluation')
     rows = [json.loads(line) for line in (folder / 'predictions.jsonl').read_text().splitlines()]
     check_prediction_prefix(rows, [(str(r['category']), str(r['question_id'])) for r in cases], complete=True)
     if metrics['count'] != len(cases) or metrics['checkpoint_sha256'] != identity['checkpoint_sha256'] or metrics['predictions_sha256'] != file_sha(folder / 'predictions.jsonl') or metrics['identity_sha256'] != object_sha(identity):
         raise ValueError('Metric identity/count/integrity mismatch')
     m = config['public_constraints']['M'] if identity['checkpoint_sha256'] else 0
-    for row, case in zip(rows, cases):
+    for index, (row, case) in enumerate(zip(rows, cases)):
         if row['question'] != case['question'] or row['label'] != case.get('label') or row['answer'] != case.get('answer'):
             raise ValueError('Prompt/label order changed')
+        if row['image_file_sha256'] != resources['ordered_images'][index]['file_sha256']:
+            raise ValueError('Prediction image provenance mismatch')
         k = 4 if identity['checkpoint_sha256'] else 0
         layers, tokens = row['dropped_original_layers'], row['dropped_visual_tokens']
         if len(layers) != len(set(layers)) or len(layers) != k or any(i not in range(16, 32) for i in layers):

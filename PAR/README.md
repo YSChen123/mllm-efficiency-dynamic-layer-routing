@@ -19,7 +19,7 @@ source .venv/bin/activate
 
 ## 2. 原始数据与模型
 
-选择一个有足够空间的工作目录，例如 `/data/par_joint`。下载并解压标准 [COCO train2017](https://images.cocodataset.org/zips/train2017.zip) 和 [COCO val2014](https://images.cocodataset.org/zips/val2014.zip)，分别放在：
+选择一个有足够空间的工作目录，例如 `/data/par_joint`。下载并解压标准 [COCO train2017](http://images.cocodataset.org/zips/train2017.zip) 和 [COCO val2014](http://images.cocodataset.org/zips/val2014.zip)，分别放在：
 
 ```text
 /data/par_joint/datasets/coco/train2017/*.jpg
@@ -36,11 +36,26 @@ python -m par_repro --work-dir /data/par_joint prepare --download-models --downl
 
 已有权重/图像可复用原始资源：复制 `configs/joint.json` 为 `configs/site.local.json`，将 `model.backbone`、`model.vision`、`data.coco_train`、`data.coco_val`、`data.seed_images` 改为你的目录。所有命令加 `--config configs/site.local.json`；已有权重时可省略 `--download-models`，已有SEED官方图像时可省略 `--download-seed-images`。相对路径按工作目录解析。`model.llava_source` 默认为工作目录内的源码checkout，保持默认即可。
 
-SEED图像允许外层目录嵌套，按data_id精确匹配文件stem；重复stem会报错。固定5256条训练/验证样本ID与解码图像指纹随代码提供；偏好生成时验证实际图像，防止换数据后仍沿用旧结果。**没有旧Arrow缓存、旧环境或旧验收状态文件的依赖。**
+SEED图像允许外层目录嵌套，支持官方ZIP中没有扩展名的文件，按data_id精确匹配；重复stem会报错。固定5256条训练/验证样本ID与解码图像指纹随代码提供；偏好生成时验证实际图像，防止换数据后仍沿用旧结果。**没有旧Arrow缓存、旧环境或旧验收状态文件的依赖。** 服务器无法联网时，可在能联网的机器下载configs中固定revision的文件并传入配置目录，校验不会跳过。
 
 ## 3. 先做完整小测
 
 用独立工作目录，例如 `/data/par_smoke`，完成同样的prepare；可用site.local.json让它共享原始模型和数据，避免复制大文件。
+
+如果已按上节默认路径准备好 `/data/par_joint`，可这样生成小测的本地路径配置：
+
+```bash
+python - <<'PY'
+import json
+from pathlib import Path
+cfg = json.loads(Path('configs/joint.json').read_text())
+for key in ['backbone', 'vision']:
+    cfg['model'][key] = '/data/par_joint/' + cfg['model'][key]
+for key, value in cfg['data'].items():
+    cfg['data'][key] = '/data/par_joint/' + value
+Path('configs/site.local.json').write_text(json.dumps(cfg, indent=2))
+PY
+```
 
 ```bash
 python -m par_repro --work-dir /data/par_smoke --config configs/site.local.json prepare
@@ -75,6 +90,8 @@ python -m par_repro --work-dir /data/par_layer --config configs/layer_only.json 
 
 Layer-only保持5000输入、5动作、M0、均衡2正×2负、global4、lr1e-4、1epoch/1250步，之后自动评测两项完整benchmark。其配置与Joint分开，不能复用不同模式的router。
 
+完整Joint网格运行后，若要单列公开selector因果mask对照，可用已有 `checkpoints/causal_b4/epoch3.pt`，以 `--config /data/par_joint/configs/causal_b4.json` 调用两项evaluate并指定 `--name causal_control`。它是预先固定的协议对照，不替换验证选中的默认模型。`configs/joint_causal_control.json` 则供不跑网格时的单独train/evaluate使用。
+
 ## 6. 单独操作和产物
 
 ```bash
@@ -86,3 +103,5 @@ python -m par_repro --work-dir /data/par_joint verify --result-dir /data/par_joi
 完整运行保存有效配置、输入/实现/权重/预测哈希、逐条动作/生成文本、评分和独立verification。不同候选必须使用对应的 `--config /data/par_joint/configs/<trial>.json`；否则拒绝评测。结果与权重不提交Git。训练权重可在完成后自行复制到新服务器；从头复现无需旧checkpoint。`convert-checkpoint` 只用于本项目历史正式5000样本权重的显式转换，禁止将smoke权重提升为正式。
 
 目前覆盖这两项benchmark与固定预算。论文其余benchmark、多预算、Joint-then-layer、实测速度/FLOPs不在已完成范围。更高POPE不证明设置一致；未知作者参数、公开论文/代码冲突及实验负结果全部保留。
+
+?????Git checkout?????editable?????????checkout?wheel??????clone??????vendor???????????site.local.json??llava_source???????????LLaVA??????prepare?????????

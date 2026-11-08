@@ -3,6 +3,8 @@ import hashlib
 import json
 import os
 import zipfile
+import tempfile
+import time
 
 
 def file_sha(path):
@@ -20,18 +22,37 @@ def object_sha(value):
 def atomic_json(path, value):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_suffix(path.suffix + '.tmp')
-    temporary.write_text(json.dumps(value, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
-    temporary.replace(path)
+    with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8', newline='\n', dir=path.parent, prefix=path.name + '.', suffix='.tmp', delete=False) as handle:
+        handle.write(json.dumps(value, indent=2, ensure_ascii=False) + '\n')
+        temporary = Path(handle.name)
+    try:
+        for attempt in range(8):
+            try:
+                temporary.replace(path)
+                break
+            except PermissionError:
+                if os.name != 'nt' or attempt == 7:
+                    raise
+                time.sleep(.01 * (attempt + 1))
+    finally:
+        temporary.unlink(missing_ok=True)
 
 
 def bind_identity(path, value):
     path = Path(path)
-    if path.exists():
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.NamedTemporaryFile(mode='w', encoding='utf-8', newline='\n', dir=path.parent, prefix=path.name + '.', suffix='.tmp', delete=False) as handle:
+        handle.write(json.dumps(value, indent=2, ensure_ascii=False) + '\n')
+        temporary = Path(handle.name)
+    try:
+        try:
+            os.link(temporary, path)
+        except FileExistsError:
+            pass
         if json.loads(path.read_text(encoding='utf-8')) != value:
             raise ValueError(f'Identity changed; use a new output directory: {path}')
-    else:
-        atomic_json(path, value)
+    finally:
+        temporary.unlink(missing_ok=True)
 
 
 def check_prediction_prefix(rows, keys, complete=False):
@@ -62,7 +83,7 @@ def package_root():
 
 def code_sha():
     root = Path(__file__).resolve().parent
-    return object_sha({str(path.relative_to(root)): file_sha(path) for path in sorted(root.glob('*.py'))})
+    return object_sha({str(path.relative_to(root)): hashlib.sha256(path.read_text(encoding='utf-8').encode()).hexdigest() for path in sorted(root.glob('*.py'))})
 
 
 def reconcile_step_log(path, step):
@@ -82,3 +103,20 @@ def reconcile_step_log(path, step):
         temporary = path.with_suffix('.tmp')
         temporary.write_bytes(b''.join(lines[:step]))
         temporary.replace(path)
+
+
+def require_resume_checkpoint(path, resume):
+    exists = Path(path).exists()
+    if resume and not exists:
+        raise FileNotFoundError('Explicit --resume requires an existing checkpoint')
+    if exists and not resume:
+        raise ValueError('Existing checkpoint requires --resume')
+
+
+def model_resource_identity(workspace):
+    prepared = json.loads((Path(workspace) / 'prepared.json').read_text())
+    if prepared['status'] != 'PREPARED':
+        raise ValueError('Resources are not prepared')
+    return {'source_commit': prepared['source_commit'],
+            'models': {name: {key: value for key, value in row.items() if key != 'stats'}
+                       for name, row in prepared['models'].items()}}

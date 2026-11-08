@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "FULL_TRAINING_ENGINE_PARITY_CONVERTED_AUTHENTICATED_FEATURES_NOT_RAW_REGENERATION",
+  "sample_count": 5000,
+  "epochs": 3,
+  "steps": 3750,
+  "epoch1_and_epoch3_all_router_weights_bitwise_equal": true,
+  "original_epoch3_sha256": "4de0e802b6b2cbd9a5c649255451ce73ee3506da1826bc7fa348084eb944d942",
+  "portable_epoch3_sha256": "cc5e53403fcddc38a093385d883dd69326e6f5cab24be0d404f7c703bfdd27e0",
+  "environment": "independent_venv",
+  "training_report_sha256": "c650afae828ac3324d0fefda4bb9692e53713aa47d64b8940ed3a848233840a2"
+}

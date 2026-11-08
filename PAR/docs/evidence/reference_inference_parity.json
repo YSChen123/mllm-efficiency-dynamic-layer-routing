@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "scope": "TWO_FORMAL_CHECKPOINTS_FIXED20_CASES_ONLY",
+  "comparisons": [
+    {
+      "model": "reference_joint",
+      "benchmark": "pope",
+      "count": 6,
+      "prompts_logits_actions_and_full_answer_text_identical": true
+    },
+    {
+      "model": "reference_joint",
+      "benchmark": "seed",
+      "count": 4,
+      "prompts_logits_actions_and_full_answer_text_identical": true
+    },
+    {
+      "model": "reference_layer",
+      "benchmark": "pope",
+      "count": 6,
+      "prompts_logits_actions_and_full_answer_text_identical": true
+    },
+    {
+      "model": "reference_layer",
+      "benchmark": "seed",
+      "count": 4,
+      "prompts_logits_actions_and_full_answer_text_identical": true
+    }
+  ],
+  "runtime": "independent_venv_and_official_source_new_workspace"
+}

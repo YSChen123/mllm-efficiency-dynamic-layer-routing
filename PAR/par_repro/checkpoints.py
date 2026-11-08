@@ -1,5 +1,5 @@
 from pathlib import Path
-from par_repro.io import atomic_json, file_sha, object_sha
+from par_repro.io import atomic_json, file_sha, object_sha, model_resource_identity
 
 
 def validate_legacy_configuration(effective, identity, config):
@@ -9,8 +9,14 @@ def validate_legacy_configuration(effective, identity, config):
         if config['training']['mode'] != 'joint' or effective['base']['router'] != config['router']:
             raise ValueError('Conversion mode/router mismatch')
         trial = effective['trial']
-        for field in ['attention_mode', 'global_batch_size', 'learning_rate', 'pairing']:
-            if field in trial and trial[field] != config['training'][field]:
+        old_settings = effective['base'].get('training', {})
+        search = effective.get('search', {})
+        normalized = {'attention_mode': trial.get('attention_mode', 'bidirectional'),
+            'global_batch_size': trial.get('global_batch_size', old_settings.get('global_batch_size', 4)),
+            'learning_rate': trial.get('learning_rate', search.get('learning_rate', old_settings.get('learning_rate', .0001))),
+            'pairing': trial.get('pairing', search.get('pairing', 'extremes'))}
+        for field, value in normalized.items():
+            if value != config['training'][field]:
                 raise ValueError('Conversion effective setting mismatch: ' + field)
     else:
         if effective['router'] != config['router']:
@@ -18,6 +24,11 @@ def validate_legacy_configuration(effective, identity, config):
         variant = effective.get('experiment_variant')
         if variant not in ['a', 'b'] or (variant == 'b') != (config['training']['mode'] == 'layer_only'):
             raise ValueError('Conversion variant/mode mismatch')
+        if config['training']['attention_mode'] != 'bidirectional' or config['training']['pairing'] != 'balanced':
+            raise ValueError('Historical v3 router uses bidirectional mask and balanced pairs')
+        for field in ['global_batch_size', 'learning_rate', 'epochs']:
+            if effective.get('training', {}).get(field) != config['training'][field]:
+                raise ValueError('Historical v3 training setting mismatch: ' + field)
 
 
 def load_router(path):
@@ -35,7 +46,7 @@ def load_router(path):
     return router, state
 
 
-def convert_checkpoint(source, destination, config):
+def convert_checkpoint(source, destination, config, workspace):
     import torch
     source, destination = Path(source), Path(destination)
     if destination.exists():
@@ -44,6 +55,7 @@ def convert_checkpoint(source, destination, config):
     effective = old['configuration']
     validate_legacy_configuration(effective, old['dataset_identity'], config)
     state = {'portable_format_version': 1, 'configuration': config, 'router': old['router'], 'step': old['step'],
+             'model_resources': model_resource_identity(workspace), 'epoch': old.get('epoch'),
              'identity': old['dataset_identity'], 'scope': 'FORMAL', 'converted_from_sha256': file_sha(source)}
     destination.parent.mkdir(parents=True, exist_ok=True)
     temporary = destination.with_suffix('.tmp')

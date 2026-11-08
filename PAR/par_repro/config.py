@@ -1,5 +1,6 @@
 from pathlib import Path
 import json
+import copy
 from par_repro.io import package_root
 
 
@@ -20,3 +21,11 @@ def load_config(path=None):
 def resolve(workspace, value):
     path = Path(value).expanduser()
     return path.resolve() if path.is_absolute() else (Path(workspace) / path).resolve()
+
+
+def scientific_config(config):
+    result = copy.deepcopy(config)
+    for key in ['backbone', 'vision', 'llava_source']:
+        result['model'].pop(key, None)
+    result.pop('data', None)
+    return result

@@ -1,0 +1,99 @@
+{
+  "status": "PASS",
+  "scope": "FOUR_TRAINING_FOUR_VALIDATION_RAW_INPUTS_NOT_BENCHMARK",
+  "raw_input_parity": [
+    {
+      "split": "training",
+      "index": 0,
+      "VQ_bitwise_equal": true,
+      "Full_response_ids_equal": true,
+      "QK_logits_bitwise_equal": true,
+      "all5_actions_equal": true,
+      "all5_KL_max_abs_difference": 0.0,
+      "best_worst_labels_equal": true
+    },
+    {
+      "split": "training",
+      "index": 1,
+      "VQ_bitwise_equal": true,
+      "Full_response_ids_equal": true,
+      "QK_logits_bitwise_equal": true,
+      "all5_actions_equal": true,
+      "all5_KL_max_abs_difference": 0.0,
+      "best_worst_labels_equal": true
+    },
+    {
+      "split": "training",
+      "index": 2,
+      "VQ_bitwise_equal": true,
+      "Full_response_ids_equal": true,
+      "QK_logits_bitwise_equal": true,
+      "all5_actions_equal": true,
+      "all5_KL_max_abs_difference": 0.0,
+      "best_worst_labels_equal": true
+    },
+    {
+      "split": "training",
+      "index": 3,
+      "VQ_bitwise_equal": true,
+      "Full_response_ids_equal": true,
+      "QK_logits_bitwise_equal": true,
+      "all5_actions_equal": true,
+      "all5_KL_max_abs_difference": 0.0,
+      "best_worst_labels_equal": true
+    },
+    {
+      "split": "validation",
+      "index": 0,
+      "VQ_bitwise_equal": true,
+      "Full_response_ids_equal": true,
+      "QK_logits_bitwise_equal": true,
+      "all5_actions_equal": true,
+      "all5_KL_max_abs_difference": 0.0,
+      "balanced_labels_equal": true
+    },
+    {
+      "split": "validation",
+      "index": 1,
+      "VQ_bitwise_equal": true,
+      "Full_response_ids_equal": true,
+      "QK_logits_bitwise_equal": true,
+      "all5_actions_equal": true,
+      "all5_KL_max_abs_difference": 0.0,
+      "balanced_labels_equal": true
+    },
+    {
+      "split": "validation",
+      "index": 2,
+      "VQ_bitwise_equal": true,
+      "Full_response_ids_equal": true,
+      "QK_logits_bitwise_equal": true,
+      "all5_actions_equal": true,
+      "all5_KL_max_abs_difference": 0.0,
+      "balanced_labels_equal": true
+    },
+    {
+      "split": "validation",
+      "index": 3,
+      "VQ_bitwise_equal": true,
+      "Full_response_ids_equal": true,
+      "QK_logits_bitwise_equal": true,
+      "all5_actions_equal": true,
+      "all5_KL_max_abs_difference": 0.0,
+      "balanced_labels_equal": true
+    }
+  ],
+  "optimizer_update_parity": {
+    "bidirectional": {
+      "initial_weights_equal": true,
+      "logits_bitwise_equal": true,
+      "optimizer_update_all_weights_bitwise_equal": true
+    },
+    "causal": {
+      "initial_weights_equal": true,
+      "logits_bitwise_equal": true,
+      "optimizer_update_all_weights_bitwise_equal": true
+    }
+  },
+  "oracle": "immutable original formal input/features/preferences; audit only, no runtime dependency"
+}
